@@ -82,7 +82,7 @@
                     <img src="img/uploads/rs-photo-v2.jpg" alt="Robert Smith"/>
                 </div>
                 <div class="profile-info">
-                    <h2 class="profile-title">Matt Wilchek</h2>
+                    <h2 class="profile-title">Matthew Wilchek</h2>
     
                     <h3 class="profile-position">Data Scientist and Geographer</h3>
                 </div>
@@ -294,7 +294,7 @@
                                 <div class="col-xs-7">
                                     <div class="profile-info">
                                         <div class="profile-preword"><span>Hello</span></div>
-                                        <h1 class="profile-title"><span>I'm</span> Matt Wilchek</h1>
+                                        <h1 class="profile-title"><span>I'm</span> Matthew Wilchek</h1>
             
                                         <h2 class="profile-position">Data Scientist and Geographer</h2></div>
                                     <ul class="profile-list">
@@ -346,7 +346,7 @@
             
                     <div class="section-txt-btn">
                         <p><a class="btn btn-lg btn-border ripple" target="_blank"
-                              href="https://github.com/mwilchek/mwilchek.github.io/blob/master/WilchekResume.pdf">Download Resume</a></p>
+                              href="https://github.com/mwilchek/mwilchek.github.io/blob/master/WilchekResume.pdf?raw=true">Download Resume</a></p>
             
                         <p>Hello! I'm Matt Wilchek. Data Scientist specializing in big data management and data visualization. Experienced with all
                             stages of the data analysis epicycle. Well-versed in numerous programming languages including Python, R, SQL, Java, 
@@ -451,7 +451,7 @@
                 <div class="filter-inner">
                     <div class="filter-btn-group">
                         <button data-filter="*">All</button>
-                        <button data-filter=".photography">Analysis Products</button>
+                        <button data-filter=".data">Data Analysis</button>
                         <button data-filter=".nature">Programs</button>
                     </div>
                     <div class="filter-bar">
@@ -463,17 +463,17 @@
             <div class="grid">
                 <div class="grid-sizer"></div>
             
-                <div class="grid-item size22 photography">
+                <div class="grid-item size22 data">
                     <div class="grid-box">
                         <figure class="portfolio-figure">
                             <img src="img/uploads/portfolio/portfolio-thumb-05-610x600.jpg" alt=""/>
                             <figcaption class="portfolio-caption">
                                 <div class="portfolio-caption-inner">
-                                    <h3 class="portfolio-title">Street Photography</h3>
-                                    <h4 class="portfolio-cat">Photography</h4>
+                                    <h3 class="portfolio-title">Visualizing Climate Change</h3>
+                                    <h4 class="portfolio-cat">Data Visualization</h4>
             
                                     <div class="btn-group">
-                                        <a class="btn-link" href="http://bit.ly/1YtB8he" target="_blank"><i
+                                        <a class="btn-link" href="https://mwilchek.shinyapps.io/gwu_data_science_exploring_climate_change/#1" target="_blank"><i
                                                 class="rsicon rsicon-link"></i></a>
                                         <a class="portfolioFancybox btn-zoom" data-fancybox-group="portfolioFancybox1"
                                            href="#portfolio1-inline1"><i class="rsicon rsicon-eye"></i></a>
@@ -489,46 +489,50 @@
                         <!-- Start: Portfolio Inline Boxes -->
                         <div id="portfolio1-inline1" class="fancybox-inline-box">
                             <div class="inline-embed" data-embed-type="image"
-                                 data-embed-url="img/uploads/portfolio/portfolio-thumb-05-large.jpg"></div>
+                                 data-embed-url="img/uploads/portfolio/portfolio-thumb-01-289x281.png"></div>
                             <div class="inline-cont">
-                                <h2 class="inline-title">Street photography is photography that features the chance
-                                    encounters and random accidents within public places.</h2>
+                                <h2 class="inline-title">This project tries to investigate for a linear relationship 
+                                    between global average temperature and time, using linear regression.</h2>
             
                                 <div class="inline-text">
-                                    <p>Street photography does not necessitate the presence of a street or even the urban
-                                        environment. Though people usually feature directly, street photography might be
-                                        absent of people and can be an object or environment where the image projects a
-                                        decidedly human character in facsimile or aesthetic.</p>
+                                    <p> The team gathered climate data from <a href="http://berkeleyearth.org/">Berkeley Earth</a>, and 
+									    focused on global land temperatures for the analysis. Data is available from 1750-2013. 
+                                        Our analysis and climate predictions are presented through ArcGIS and a R Shiny web application. All source 
+										code is availble in our Github repository <a href="https://github.com/mwilchek/GWU_Project.AnalyzingClimateChange">here</a>.</p>
                                 </div>
                             </div>
                         </div>
             
                         <div id="portfolio1-inline2" class="fancybox-inline-box">
-                            <div class="inline-embed" data-embed-type="image"
-                                 data-embed-url="img/uploads/portfolio/portfolio-thumb-01-large.jpg"></div>
+                            <div class="inline-embed" data-embed-type="iframe"
+                                 data-embed-url="http://www.arcgis.com/apps/View/index.html?appid=a29ddc77e43a4013a982d08d8344cb6b"></div>
                             <div class="inline-cont">
                                 <div class="inline-text">
-                                    <h2 class="inline-title">Framing and timing</h2>
+                                    <h2 class="inline-title">U.S. Temperatures</h2>
             
-                                    <p>Framing and timing can be key aspects of the craft with the aim of some street
-                                        photography being to create images at a decisive or poignant moment. Street
-                                        photography can focus on emotions displayed, thereby also recording people's history
-                                        from an emotional point of view.</p>
+                                    <p>By using ArcGIS, I developed an interactive web map application to help visualize how CONUS temperatures 
+									   changed over the years in major cities. The shapefiles used for the application can also be found in 
+									   the Github repository <a href="https://github.com/mwilchek/GWU_Project.AnalyzingClimateChange">here</a>.</p>
                                 </div>
                             </div>
                         </div>
             
                         <div id="portfolio1-inline3" class="fancybox-inline-box">
                             <div class="inline-embed" data-embed-type="iframe"
-                                 data-embed-url="https://player.vimeo.com/video/118244244"></div>
+                                 data-embed-url="img/uploads/portfolio/portfolio-thumb-05-610x600.png"></div>
                             <div class="inline-cont">
                                 <div class="inline-text">
-                                    <h2 class="inline-title">A Look Into Documenting Street Fashion Photography</h2>
+                                    <h2 class="inline-title">Analyzing Models and Interpreting Results</h2>
             
-                                    <p>HB Nam is an internationally known street fashion photographer. In this Leica Camera
-                                        Portrait, Nam explains how he started in photography and what photography means to
-                                        him. For Nam, it's about documenting what's around him and the concentration
-                                        required to achieve a good shot.</p>
+                                    <p>The 1975-2013 model is Y = -49.148211+0.048966X, with both the coefficient and intercept 
+									   statistically significant at the alpha <0.05 level. The overall model has a statistically 
+                                       F-statistic as well and is a good fit. The adjusted R^2 = 0.7813. While this R^2 is not 
+									   as good as the first, it is still an acceptable R^2. </p>
+									<p>From an R^2 perspective, model 1 has the best result. However, from an interpretation 
+									   standpoint, the coefficient for time in Model 1 is close to 0 and thus shows just a small 
+									   rise in temperature. This model does not provide a good fit to recent temperatures while 
+									   Model 4 does. To check out our predictions for future temperatures using Model 4, check out
+									   our web application <a href="https://mwilchek.shinyapps.io/gwu_data_science_exploring_climate_change/#1">here</a>.</p>
                                 </div>
                             </div>
                         </div>
