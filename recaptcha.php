@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class=" theme-color-07cb79 theme-skin-light">
+<html lang="en" class=" theme-color-07cb79 theme-skin-dark">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -85,8 +85,8 @@
                     <img src="img/uploads/rs-photo-v2.jpg" alt="Robert Smith"/>
                 </div>
                 <div class="profile-info">
-                    <h2 class="profile-title">Robert Smith</h2>
-                    <h3 class="profile-position">Developer and businessman</h3>
+                    <h2 class="profile-title">Matt Wilchek</h2>
+                    <h3 class="profile-position">Data Scientist and Geographer</h3>
                 </div>
             </aside><!-- .widget-profile -->
 
@@ -221,11 +221,6 @@
             <div class="head-bar">
                 <div class="head-bar-inner">
                     <div class="row">
-                        <div class="col-sm-3 col-xs-6">                            
-                            <a class="logo" href="index.html"><span>RS</span>card</a>
-							<!-- <a class="head-logo" href=""><img src="img/rs-logo.png" alt="RScard"/></a> -->
-                        </div>
-
                         <div class="col-sm-9 col-xs-6">
                             <div class="nav-wrap">
                                 <nav id="nav" class="nav">
@@ -269,8 +264,8 @@
 						
 			<!-- START: PAGE CONTENT -->
 			<?php require_once __DIR__ . '/php/recaptcha/autoload.php';				
-				$siteKey = ''; // visit https://www.google.com/recaptcha/admin to generate keys
-				$secret = '';
+				$siteKey = '6Lct4yEUAAAAAGQC_BafJvqXxLJUMB4ayfctgL3X'; // visit https://www.google.com/recaptcha/admin to generate keys
+				$secret = '6Lct4yEUAAAAAL2InNQmA5lxmpg1nmEz-VXHwxiM';
 				$lang = 'en'; // reCAPTCHA supported 40+ languages listed here: https://developers.google.com/recaptcha/docs/language
 			?>
 			
