@@ -466,6 +466,84 @@
                 <div class="grid-item size22 data">
                     <div class="grid-box">
                         <figure class="portfolio-figure">
+                            <img src="img/uploads/portfolio/portfolio-thumb-14-610x600.jpg" alt=""/>
+                            <figcaption class="portfolio-caption">
+                                <div class="portfolio-caption-inner">
+                                    <h3 class="portfolio-title">Predicting the Stock Market</h3>
+                                    <h4 class="portfolio-cat">Data Mining</h4>
+            
+                                    <div class="btn-group">
+                                        <a class="btn-link" href="https://github.com/mwilchek/GWU-Data-Mining-Proposal-1" target="_blank"><i
+                                                class="rsicon rsicon-link"></i></a>
+                                        <a class="portfolioFancybox btn-zoom" data-fancybox-group="portfolioFancybox1"
+                                           href="#portfolio0-inline1"><i class="rsicon rsicon-eye"></i></a>
+                                        <a class="portfolioFancybox hidden" data-fancybox-group="portfolioFancybox1"
+                                           href="#portfolio0-inline2"></a>
+                                        <a class="portfolioFancybox hidden" data-fancybox-group="portfolioFancybox1"
+                                           href="#portfolio0-inline3"></a>
+                                    </div>
+                                </div>
+                            </figcaption>
+                        </figure>
+            
+                        <!-- Start: Portfolio Inline Boxes -->
+                        <div id="portfolio0-inline1" class="fancybox-inline-box">
+                            <div class="inline-embed" data-embed-type="iframe"
+                                 data-embed-url="https://mwilchek.shinyapps.io/predicting_the_stock_market/"></div>
+                            <div class="inline-cont">
+                                <h2 class="inline-title">Graduate School Data Mining Project that Attmepts to Predict the Stock Market</h2>
+            
+                                <div class="inline-text">
+                                    <p>This project attempted to develop a proof of concept to predict any stock performance for current day 
+									and following day, based on history and the assumption news sentiment in a given day has a significant relationship.
+									The above shows a Web Application developed in R to visualize the results of our project.
+									To view our approach check out our presentation of the project <a href="https://github.com/mwilchek/GWU-Data-Mining-Proposal-1/blob/master/Final_Presentation.pptx?raw=true">here</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div id="portfolio0-inline2" class="fancybox-inline-box">
+                            <div class="inline-embed" data-embed-type="image"
+                                 data-embed-url="img/uploads/portfolio/portfolio-thumb-14a-610x600.jpg"></div>
+                            <div class="inline-cont">
+                                <div class="inline-text">
+                                    <h2 class="inline-title">Stock and News Web Scraping</h2>
+            
+                                    <p>In order to create a sufficient supervised machine learning algorithm our project required sufficient data collection. 
+									We extracted stock data using an API from Yahoo Finance and news headline data from a Reddit API called PRAW. Once the data 
+									was collected on a daily basis, we executed a separate sentiment algorithm on the news data using R (that can be found <a href="https://github.com/mwilchek/GWU-Data-Mining-Proposal-1/blob/master/sentiment_extraction.R">here</a>), and joined all to the 
+									master dataset for the algorithm. To view our data collection script click <a href="https://github.com/mwilchek/GWU-Data-Mining-Proposal-1/blob/master/process_reddit.py">here</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div id="portfolio0-inline3" class="fancybox-inline-box">
+                            <div class="inline-embed" data-embed-type="image"
+                                 data-embed-url="img/uploads/portfolio/portfolio-thumb-14-289x281.jpg"></div>
+                            <div class="inline-cont">
+                                <div class="inline-text">
+                                    <h2 class="inline-title">Modeling</h2>
+            
+                                    <p>In order to account for changing sentiment on any given day from our previous sentiment 
+									algorithm, we needed to identify the most significant sentiment for the current and 
+									predicted following day for our primary models.	To do so, we leveraged Python Sklearn's 
+									library for a Random Forest. Click here to view a plot for one of our results in a single 
+									execution <a href="https://github.com/mwilchek/GWU-Data-Mining-Proposal-1/blob/master/Tomorrow_Close_RandomForest_Results.png">here</a>.</p>
+									<p>Finally after identifying the most significant sentiment in the given day, we were able 
+									to refine our models for a fit regression. As new data is collected and added to our master dataset, 
+									our train/test prediction model will continually be refined and accuracy improved. To check out our 
+									final algorithm, click <a href="https://github.com/mwilchek/GWU-Data-Mining-Proposal-1/blob/master/Data_Mining_Analysis.py">here</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End: Portfolio Inline Boxes -->
+                    </div>
+                </div>
+                <!-- .grid-item -->
+				
+				<div class="grid-item size11 data">
+                    <div class="grid-box">
+                        <figure class="portfolio-figure">
                             <img src="img/uploads/portfolio/portfolio-thumb-05-610x600.jpg" alt=""/>
                             <figcaption class="portfolio-caption">
                                 <div class="portfolio-caption-inner">
@@ -679,25 +757,41 @@
                                 <div class="timeline-box-inner animate-right">
                                     <span class="arrow"></span>
             
-                                    <div class="date">2016 - Present</div>
-                                    <h3>U.S. Census Bureau - Geography Dvision</h3>
-                                    <h4>Geographer (Federal Position)</h4>
+                                    <div class="date">2017 - Present</div>
+                                    <h3>DHS - Immigration and Customs Enforcement (ICE)</h3>
+                                    <h4>Operations Research Analyst (Federal Position - Permanent)</h4>
             
-                                    <p>Support a research and development branch with
-										updating and innovating Big Data, while improving data
-										visualization methodologies leveraging various programming languages. </p>
+                                    <p>Support the Systems and Operational Analysis Unit under ICE's 
+									Field Operations through designing and editing advance statistical 
+									programs and simulation models using machine learning in R and Python.</p>
                                 </div>
                             </div>
-            
-                            <div class="timeline-box timeline-box-right">
+							
+							<div class="timeline-box timeline-box-right">
                                 <span class="dot"></span>
             
                                 <div class="timeline-box-inner animate-left">
                                     <span class="arrow"></span>
             
+                                    <div class="date">2016 - 2017</div>
+                                    <h3>U.S. Census Bureau - Geography Dvision</h3>
+                                    <h4>Geographer (Federal Position - Term)</h4>
+            
+                                    <p>Supported a research and development branch with
+										updating and innovating Big Data, while improving data
+										visualization methodologies leveraging various programming languages. </p>
+                                </div>
+                            </div>
+            
+                            <div class="timeline-box timeline-box-left">
+                                <span class="dot"></span>
+            
+                                <div class="timeline-box-inner animate-right">
+                                    <span class="arrow"></span>
+            
                                     <div class="date">2015 - 2016</div>
                                     <h3>USDA - Foreign Agricultural Service</h3>
-                                    <h4>Web/GIS Developer (Federal Position)</h4>
+                                    <h4>Web/GIS Developer (Federal Position - Term)</h4>
             
                                     <p>Acted as the primary technology liaison/business analyst for
 										the Disaster Assistance division's Office of the Director. Developed and 
@@ -706,10 +800,10 @@
                                 </div>
                             </div>
             
-                            <div class="timeline-box timeline-box-left">
+                            <div class="timeline-box timeline-box-right">
                                 <span class="dot"></span>
             
-                                <div class="timeline-box-inner animate-right">
+                                <div class="timeline-box-inner animate-left">
                                     <span class="arrow"></span>
             
                                     <div class="date">2012 - 2015</div>
@@ -722,10 +816,10 @@
                                 </div>
                             </div>
             
-                            <div class="timeline-box timeline-box-right">
+                            <div class="timeline-box timeline-box-left">
                                 <span class="dot"></span>
             
-                                <div class="timeline-box-inner animate-left">
+                                <div class="timeline-box-inner animate-right">
                                     <span class="arrow"></span>
             
                                     <div class="date">2012 - 2012</div>
@@ -740,10 +834,10 @@
                                 </div>
                             </div>
             
-                            <div class="timeline-box timeline-box-left">
+                            <div class="timeline-box timeline-box-right">
                                 <span class="dot"></span>
             
-                                <div class="timeline-box-inner animate-right">
+                                <div class="timeline-box-inner animate-left">
                                     <span class="arrow"></span>
             
                                     <div class="date">2011 - 2012</div>
