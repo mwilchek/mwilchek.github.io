@@ -368,6 +368,10 @@ function spendingEducationPercentResponseHandler(response) {
 
 function spendingEducationPerPersonResponseHandler(response) {
   var data = response.getDataTable();
+
+  var formatter = new google.visualization.NumberFormat({fractionDigits: 0, prefix: '$'});
+  formatter.format(data, 1); //apply formatter to the second column
+
   var options = {
       colorAxis: {colors: ['#660000','#DC143C','#FF0000','#FF4500','#FF8C00','#FFD700','#00CED1','#00BFFF','#1E90FF','#004C99']}};
 
