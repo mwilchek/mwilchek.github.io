@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Google Visualization API Load-in-->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+  <!-- Project Visualizations Load-in-->
+  <script type="text/javascript" src="js/amazing-graphs.js"></script>
+
+  <title>DATS 6401 - Individual Project</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles -->
+  <link href="css/scrolling-nav.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">World Spending Analysis</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#overview">Overview</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#healthcare">Healthcare</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#military">Military</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#end">Conclusion</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about">
+    <header class="bg-light">
+      <div class="container text-center">
+        <h1>DATS 6401 - Individual Project</h1>
+        <p class="lead">By: Matt Wilchek</p>
+      </div>
+    </header>
+  </section> <!-- End of About Section -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <p class="lead">
+          The purpose for this project is to visualize data using the Google Visualization API and advancing data visualization techniques. 
+          This individual project will use country education, healthcare and military spending data as the foundation for the following visualizations. Using 
+          creative plots on data, important insights can be drawn from complex data that ultimately tell a story.
+        </p>
+      </br>
+        <p>
+          Below are the following data sources used in this analysis:
+          <ul>
+            <li><b>Data Title: </b>Healthcare Spending in Millions ($USD)</br><b>Data Source: </b><a href="https://apps.who.int/nha/database/ViewData/Indicators/en">World Health Organization</a></li>
+            <li><b>Data Title: </b>Education Spending % by GDP</br><b>Data Source: </b><a href="http://data.uis.unesco.org/">The United Nations Educational, Scientific and Cultural Organization (UNESCO)</a></li>
+            <li><b>Data Title: </b>Saudi Arabia Education Spending</br><b>Data Source: </b><a href="http://www.jadwa.com/en/researchsection/research/economic-research/budget-reports">Jadwa Economic Research</a></li>
+            <li><b>Data Title: </b>Military Spending in Millions ($USD)</br><b>Data Source: </b><a href="https://www.sipri.org/databases/milex">Stockholm International Peace Research Institute (SIPRI)</a></li>
+            <li><b>Data Title: </b>Country GDP in Millions ($USD)</br><b>Data Source: </b><a href="https://data.worldbank.org/indicator/NY.GDP.MKTP.CD">World Bank</a></li>
+            <li><b>Data Title: </b>Country Population in Thousands</br><b>Data Source: </b><a href="https://data.worldbank.org/indicator/SP.POP.TOTL">World Bank</a></li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div> <!-- End of About Container Content -->
+
+  <!-- Overview Section -->
+  <section id="overview">
+    <header class="bg-primary text-white">
+      <div class="container text-center">
+        <h1>Overall Spending Summary</h1>
+      </div>
+    </header>
+  </section> <!-- End of Overview Section -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <h2>Overall Spending Summary</h2>
+        <p class="lead"> Before diving deep into each category of spending, it's important to first see how each compares together to gain a sense 
+          of the overall analysis. Below is an executive overiew of all the Healthcare, Education, and Military spending data:
+        </p>
+        <!-- Enter Histogram of Spending Data of Top 10 Countries -->
+        <div id="spending_summary_div" style="width: 900px; height: 500px;"></div>
+        <div style="text-align: center">
+          <p class="small"><i>Note: Healthcare data goes up to 2018, Military data to 2019, and Education data to 2016 </i></p>
+          </br>
+          <button class="button button2" id="b1">Refresh</button>
+          <button class="button button3" id="b2">Remove a Category</button>
+        </div></br>
+        <p>At first, we can immediately notice that the categories of Education and Military have the highest average spending. The U.S. and China have 
+          the largest average of spending for both Education and Military. As we interact with the graph and drill down to see the significant lower 
+          distribution of Healthcare, we notice that the U.S. still is the largest, but China is one of the lowest in all the countries.
+        </p>
+      </div>
+    </div> <!-- End of Row 1 -->
+
+    <br><br>
+
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2>Health & Education Spending Vs. Military Spending</h2>
+        <p class="lead">Healthcare and Education are critical for a growing country. They can be considered as part of basic needs for people. However, 
+            security and recognition of sovereignty from other nations is also important. Let's next compare spending of Healthcare and Education versus 
+            Military spending data:
+        </p></br>
+        <!-- Enter Comparison Viz for Health & Education Spending Vs. Military Spending -->
+        <div id="spending_summary_othersMil_div" style="width: 900px; height: 300px;"></div></br>
+        <p>The combined distribution of Healthcare and Education spending makes up 50% or more of the total average spending of all categories. As a citizen 
+          for one of these countries, I would hope that would be the case. It is interesting to see though that three countries of the group spend up more 
+          than 40% of the total average spending in Military. India was an unexpected country that one may not assume to be one of these three. Although there 
+          may be some data discrepancies due to the total average that was calculated since Military spending data was available up to 2019. 
+        </p>
+        <p>Despite the data discrepancies in terms of data availability, by drilling down into both Healthcare, Education, and Military spending analysts 
+          can begin to see the overall growth of each sectors for the top G-20 countries. A story can begin to unfold with these insights that reveal 
+          important trends and patterns about the data. Ultimately, we should be able to summarize what countries continue to grow in these important 
+          spending categories and which countries are beginning to fall behind!
+        </p>
+      </div>
+    </div>  <!-- End of Row 2 -->
+  </div> <!-- End of Overview Container Content -->
+
+  <!-- Healthcare Section -->
+  <section id="healthcare">
+    <header class="bg-success text-white">
+      <div class="container text-center">
+        <h1>Healthcare Spending</h1>
+      </div>
+    </header>
+  </section> <!-- End of Healthcare Section -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2>Healthcare Summary</h2>
+        <p class="lead">Healthcare is a critical need to ensure a country's population growth. Therefore, one would assume the percentage of spending 
+          in healthcare would make up a decent fraction of the total GDP of a country. To confirm our assumption let's look at the Healthcare Spending 
+          vs Country GDP. Then see how spending has changed over time...
+        </p>
+      </div>
+      <div class="col-md-6">
+        <!-- Enter Viz for Healthcare Spending Vs. Country GDP -->
+        </br></br></br>
+        <div id="average_healthcare_vs_gdp_div" style="width: 900px; height: 500px;"></div> </br>
+        <p>On the table breakdown, we can see the overall spending in healthcare for all the countries. Surprisingly, when compared to the overall GDP of each 
+          country, healthcare only makes up a small percentage. Some of the most developed countries are near the bottom like the United States and United 
+          Kingdom. For the U.S. this makes sense because most healthcare spending comes from private industry and the most if not all the healthcare 
+          spending by government is for <a href="https://www.medicare.gov/">Medicare</a> (federal health insurance for people 65 years of age or older) 
+          or <a href="https://www.medicaid.gov/">Medicaid</a> (very low-income people). It is a little odd though that the UK is so low, since most 
+          European countries are known for their governments spending more, like France and Germany. </p>
+      </div>
+      <div class="col-md-6">
+        <div id="healthcare_spending_summary_div" style="width: 900px; height: 500px;"></div>
+        <div style="text-align: right">
+          <button class="button button2" id="b3">Refresh</button>
+          <button class="button button3" id="b4">Remove a Country</button>
+        </div></br>
+        <p style="margin-left: 80px;">The line graph shows much more interesting trends though of the data. Even though the United States is the 
+          lowest in overall healthcare spending percentage compared to its GDP, spending is greatly increasing over time. It’s likely due to the baby boomer 
+          generation of people becoming applicable for Medicare. The increasing trend is likely to continue more so with the large unemployment rate during the 
+          COVID-19 pandemic forcing people to lose their employer insurance and lowering their income even more. Spending otherwise, remains to be consistent 
+          with no significant increases or decreases compared to the other countries which can be viewed more closely as we interact with 
+          the buttons below the chart.</p>
+      </div>
+    </div> <!-- End of Row 1 -->
+    
+    <br><br><br>
+
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2>Per Person Healthcare Spending</h2>
+        <p class="lead">The previous visualization gives us a better idea how healthcare spending is becoming more of a priority for the US and the overall 
+          trends for each country. However, the total GDP for a country is also dependent on the population of the country. To confirm that we do not 
+          percieve a country spending less through the comparison of total Healthcare Spending Vs. Total GDP, let's further breakdown the metric to per 
+          person spending.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <!-- Enter Viz for Per Person Healthcare Spending Vs. Country Per Person GDP -->
+        </br></br></br>
+        <div id="average_healthcare_per_person_div" style="width: 900px; height: 500px;"></div></br>
+        <p>The table breakdown now changes some of the country standings when we look at the data from the perspective of per person. For example, China 
+          was number three on the table above, but now the third to last. The UK also rose slightly higher. However, the US remains to be on the bottom 
+          despite it’s increasing trend. Australia seems to care the most about its citizens when it comes to healthcare as it stands as number one for 
+          overall spending and per person spending. </p>
+      </div>
+      <div class="col-md-6" >
+        <div id="summary_healthcare_per_person_div" style="width: 900px; height: 500px;"></div>
+        <div style="text-align: right">
+          <button class="button button2" id="b5">Refresh</button>
+          <button class="button button3" id="b6">Remove a Country</button>
+        </div></br>
+        <p style="margin-left: 80px;">As we interact with each country’s spending trend per person from 2012 to 2018 on this line graph, we see the trends to be consistent 
+          from 2012-2018. Therefore, we can surmise that for the most part, the countries have not increased their spending for each individual, but the 
+          volume of older people receiving government subsidized medical care is increasing, especially for the United States.</p>
+      </div>
+    </div> <!-- End of Row 2 -->
+    
+    <br><br><br>
+
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2>Fastest Growing Countries in Healthcare Spending</h2>
+        <p class="lead">Now that we understand how important education is for all the countries, let's dive deeper to understand the growth of this category. 
+          What countries are have increased their spending over time by fixed value and total overall percentage?
+        </p>
+      </div>
+      <div class="col-lg-12 mx-auto">
+        <!-- Enter Viz for Fastest growing countries in healthcare spending in fixed value and in percentage -->
+        <div id="Healthcare_Spending_Growth_div" style="width: 1200px; height: 700px;"></div> </br>
+      </div>
+      <div class="col-lg-8 mx-auto">
+        <p>By breaking down the difference in spending from year to year for the bar chart above, we can clearly see now how countries have changed their 
+          healthcare budgets over time. What’s surprising is only 4 of the 12 countries remain consistent for having a positive budget from 2012 to 2018. 
+          From 2014 to 2015, eight countries decreased their spending budget, some of them significantly. This is odder since that was during the start of 
+          the Ebola health crisis, therefore other external factors may have contributed such as different political stances. This was also during the 
+          tense standoff between Ukraine and Crimea; therefore, Russia may have prioritized their budget in military more in this period. South Korea and 
+          China are the only countries that maintain to almost a 10% increase throughout the entire time period. </p></br>
+          <h3 style="text-align: center;"><b>Key Healtchare Insights</b></h3>
+          <p>By analyzing the healthcare spending important insights can be inferred from the visualizations:</p>
+          <ol>
+            <li>Overall spending in healthcare is increasing for most countries and is focused on the growing population. Therefore, the quality healthcare, 
+              which could be inferred by the per person spending, has relatively remained to be the same since 2012.</li>
+            <li>Healthcare spending remains to be a small prioritization for the top 12 G-20 countries. Data for 2019 and 2020 may change these trends 
+              dramatically since the COVID-19 pandemic, and hopefully there will be more growth seen in per person spending.</li>
+          </ol>
+      </div>
+    </div> <!-- End of Row 3 -->
+    <br><br>
+  </div> <!-- End of Healthcare Container Content -->
+
+  <!-- Education Section -->
+  <section id="education">
+    <header class="bg-warning text-white">
+      <div class="container text-center">
+        <h1>Education Spending</h1>
+      </div>
+    </header>
+  </section> <!-- End of Education Section -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2>Education Summary</h2>
+        <p class="lead">Education is another critical need to ensure a country's population and GDP growth. Therefore, one would 
+          assume the percentage of spending in education would make up a sizeable fraction of the total GDP of a country. 
+          Similar in our healthcare spending analysis, let’s confirm our assumption by looking at the Education Spending vs 
+          Country GDP. Then breakdown how spending has changed over time.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <!-- Enter Viz for Education Spending Vs. Country GDP -->
+        </br></br></br>
+        <div id="average_education_vs_gdp_div" style="width: 900px; height: 500px;"></div></br>
+        <p>On the table breakdown, we can see the overall spending in education for all the countries. Unlike the first breakdown in healthcare, education 
+          makes up a much larger overall percentage of the GDP for each country.  The United States is at the top with highest gross average of spending 
+          but maintains a similar overall percentage of spending versus GDP of around 5% like all the other countries. However, there is an interesting 
+          outlier in our breakdown. Saudi Arabia maintains an average of almost 24% of education spending versus it’s GDP. Upon further research into 
+          this statistic, it’s been reported that the country is trying to move away it’s dependency of oil and promote higher learning of its people 
+          be able to continue to modernize and become a country of technological innovation.</p>
+      </div>
+      <div class="col-md-6">
+        <div id="Education_Spending_Percent_div" style="width: 800px; height: 500px;"></div>
+        <div style="text-align: center">
+          </br>
+          <button class="button button2" id="refreshEdu1">View all Countries</button>
+          <button class="button button3" id="removeEdu1">Remove Saudi Arabia</button>
+        </div></br>
+        <p style="margin-left: 80px;">The line graph provides a further breakdown how countries have prioritized education from 2012 to 2016. Besides Saudi 
+          Arabia standing out, which can be removed to auto-scale the graph to the other countries, the remaining line trends remain to be consistent for 
+          the other countries. Interestingly, China remains to be the next highest, devoting 6% to 7% of its GDP to education. Brazil was staying around 
+          the average of other countries, but in 2016 made a sharp drop to 4.2%. This may have been to different budget plans with their new president. 
+          India also made a large decrease from close to 4% to 2.4% from 2013 to 2015/16. </p>
+      </div>
+    </div> <!-- End of Row 1 -->
+
+    <br><br><br>
+
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2>Per Person Education Spending</h2>
+        <p class="lead">The previous visualization gives us a better idea how education spending is and is not a prioritization for a country such as China or India. 
+          However, the total GDP for a country is also dependent on the population of the country like we realized in our healthcare drill down. To confirm that we do not 
+          percieve a country spending less through the comparison of total Education Spending Vs. Total GDP, let's further breakdown the metric to per 
+          person spending as well.
+        </p>
+        <!-- Enter Viz for Per Person Education Spending Vs. Country Per Person GDP -->
+        <div id="Education_Spending_Per_Person_div" style="width: 900px; height: 500px;"></div></br>
+        <p> Compared to our previous breakdown of per person spending using a stacked area chart for the healthcare spending, the map distribution portrays a 
+          different illustration that highlights what countries are indeed prioritizing education spending. What’s immediately striking in the map is China. 
+          Even though we inferred above that China’s overall percent of spending compared to GDP was above average, their actual per person spending is 
+          significantly lower compared to that of other countries. However, this discrepancy could be contributed to the significant population China has 
+          compared to others. The United States, Australia, and Europe remain to be in the middle. And of course, Saudi Arabia sticks out again for having a 
+          significantly higher per person spending rate.</p>
+      </div>
+    </div> <!-- End of Row 2 -->
+    
+    <br><br><br>
+
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2>Fastest Growing Countries in Educational Spending</h2>
+        <p class="lead">Now that we understand how important education is for all the countries, let's dive deeper to understand the growth of this category. 
+          What countries have increased their spending over time by fixed value and total overall percentage?
+        </p>
+      </div>
+      <div class="col-lg-12 mx-auto">
+        <!-- Enter Viz for Fastest growing countries in educational spending in fixed value and in percentage -->
+        <div id="Education_Spending_Growth_div" style="width: 1200px; height: 700px;"></div>
+      </div>
+      <div class="col-lg-8 mx-auto">
+        <p>By breaking down the difference in spending from year to year for the bar chart above, we can clearly see now how countries have changed their 
+          education budgets over time. The first immediate piece noticed is that almost all the countries have had decreased percentage growth from 2012 
+          to 2016. Only China and the United States have managed for the most part to have a near-positive growth rate in education spending, but not 
+          very significant. Everyone else though has some large fluctuations, especially Brazil and Russia. Seven of the twelve countries all have 
+          declining growth for the latest data available indicating that their spending budgets may have other priorities than education given the current 
+          situation of the world.</p></br>
+          <h3 style="text-align: center;"><b>Key Education Insights</b></h3>
+          <p>By analyzing the education spending important insights can be inferred from the visualizations:</p>
+          <ol>
+            <li>Education is a significantly higher prioritization of spending for the G-20 countries compared to healthcare. </li>
+            <li>Overall education spending has remained consistent from 2012 to 2016, but for most countries is starting to slowdown in growth.</li>
+            <li>Saudi Arabia has made education a critical investment to grow its country and lessen its dependency on oil.</li>
+          </ol>
+      </div>
+    </div> <!-- End of Row 3 -->
+    <br><br>
+  </div> <!-- End of Education Container Content -->
+
+  <!-- Military Section -->
+  <section id="military">
+    <header class="bg-dark text-white">
+      <div class="container text-center">
+        <h1>Military Spending</h1>
+      </div>
+    </header>
+  </section> <!-- End of Military Section -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2>Military Summary</h2>
+        <p class="lead">As analyzed above, healthcare & education spending only make up a fraction of a country's total GDP. Previously in our executive 
+          summary we also saw that military spending almost made up 20% to 40% of the total spending of all the categories. Before diving deeper on 
+          this category of spending, let's first understand the total Military Spending Vs. Country GDP. Then see how spending has changed over time.
+       </p>
+      </div>
+      <div class="col-md-6">
+       </br></br></br>
+       <!-- Enter Viz for Military Spending Vs. Country GDP -->
+       <div id="average_military_vs_gdp_div" style="width: 900px; height: 500px;"></div> </br>
+       <p>On the table breakdown, we can see the overall spending in military for all the countries. Unlike the previous breakdowns, military spending 
+         for the most part makes up a smaller average percentage of GDP compared to education, but still higher than healthcare. The United States is 
+         at the top again with highest gross average of spending but maintains a similar overall percentage that hovers between 4% to close to 2%. 
+         However, both the United Kingdom and Saudi Arabia have a significantly higher overall percentage of GDP in military spending. Both the U.S. 
+         and UK have a close relationship with Saudi Arabia, therefore it’s likely all three countries collaborate closely for military resources. </p>
+     </div>
+     <div class="col-md-6">
+      <div id="Military_Spending_Percent_div" style="width: 800px; height: 500px;"></div>
+        <div style="text-align: center">
+          </br>
+          <button class="button button2" id="refreshMil1">View all Countries</button>
+          <button class="button button3" id="removeMil1">Remove a Country</button>
+        </div></br>
+        <p style="margin-left: 80px;">The line graph provides another further breakdown how countries have prioritized military spending from 2012 to 
+          2019. Besides the United States standing out, which can be removed to auto-scale the graph to the other countries, the remaining line trends 
+          remain to be consistent for the other countries. However, China seems to be significantly increasing it’s spending since 2016. This may 
+          likely be due to the latest controversy of island disputes in the South China Sea, but if their growth continues their total mean spending 
+          may eventually rival the United States.</p>
+     </div>
+   </div> <!-- End of Row 1 -->
+
+   <br><br><br>
+
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2>Per Person Military Spending</h2>
+        <p class="lead">The previous visualization gives us a better idea how military spending is and is not a prioritization for a country. However, the 
+          total GDP for a country is also dependent on the population of the country as we learned from our previous analyses in the healthcare and education 
+          spending. To confirm that we do not percieve a country spending less through the comparison of total Military Spending Vs. Total GDP, let's again 
+          further breakdown the metric to per person spending.
+        </p>
+      </div>
+      <div class="col-md-12 mx-auto"></div>
+        <!-- Enter Viz for Per Person Military Spending Vs. Country Per Person GDP -->
+        <div id="Military_Spending_Per_Person_div" style="width: 1300px; height: 700px;"></div>
+      </div>
+      <div class="col-lg-8 mx-auto">
+        <p>The bubble chart provides another different illustration to help depict the differences in per person military spending by growth rate compared to 
+          the stacked area chart and map. Some of the immediate insights we can gain is that most of the European countries have similar average per person 
+          spending as most Asian countries, but the Asian countries have a higher growth rate. Russia may have a higher per person spending average but 
+          appears to be slowing its growth in spending. This maybe likely due to tensions between Ukraine and Crimea gradually easing since the military 
+          spending data is more recent.  The United States is again consistent maintaining a balance of high spending per person and a slight decrease or 
+          increase in growth depending on the year. And Saudi Arabia and the United Kingdom have been significantly growing and increasing the average per 
+          person spending.</p></br>
+          <h3 style="text-align: center;"><b>Key Military Insights</b></h3>
+          <p>By analyzing the military spending important insights can be inferred from the visualizations:</p>
+          <ol>
+            <li>Military spending is a significant higher prioritization of spending for most G-20 countries, but not as high compared to education for others.</li>
+            <li>Saudi Arabia and the United Kingdom have been greatly increasing their spending in military resources.</li>
+            <li>Asian countries are also seen to be increasing their growth of per person military spending which could be due to increased tension in the 
+              South China Sea.</li>
+          </ol>
+          </br></br>
+          <h2 id="end" style="text-align: center;"><b>Final Summary</b></h2>
+          <p>In the beginning, we looked at a high level the total distribution between the top G-20 countries spending in healthcare, education, and military 
+            from approximately 2012 to 2019. After drilling down in all the categories to carefully analyze and visualize, a story can be inferred that 
+            paints a picture of prioritized investments for some of the most developed countries in the world. Most importantly, we can see how some of the 
+            largest developed countries are maintaining their status based on these spending categories. Below are some of the most impactful observations 
+            that may likely change how they are viewed to world and ultimately more successful. </p>
+          <ol>
+            <li><b>United States:</b> With the largest GDP out of all the countries, the US’s growth as remained steady over all the years. The US continues 
+              to balance spending priorities in all categories and has continued to demonstrate its status as a world superpower. Compared to most of the 
+              other countries, who can be seen fluctuating over certain years and for certain spending categories as world crises occur.</li>
+            <li><b>Saudi Arabia:</b> The country continues to devote high prioritization in military spending equally comparable to that of the United States 
+              and the United Kingdom. They also have started to significantly make education a prioritization for the country since 2012 and continue to do 
+              so according the latest country budget report by KPMG <a href="https://home.kpmg/content/dam/kpmg/sa/pdf/2019/KingdomofSaudi%20Arabia2020BudgetReport.pdf" 
+              target="blank">here</a>.</li>
+            <li><b>China:</b> One of the largest most populated countries, China has a higher than average prioritization in education spending and is 
+              steadily increasing it’s spending in military resources. In latest world developments, the country has been going through notable internal 
+              changes with international policy and attempting to demonstrate its presence internationally through it’s handling of the COVID-19 pandemic 
+              (healthcare), dominance over technological advancement (education), and growing presence in the South China Sea (military).</li>
+          </ol>
+          <p>It’ll be certainly interesting to watch these top 3 countries evolve as the world continues to develop…</p>
+      </div>
+    </div> <!-- End of Row 2 -->
+    <br><br>
+  </div> <!-- End of Military Container Content -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark text-white">
+    <div class="container text-center">
+      <div id="footer">
+          Copyright &copy; 
+          <script>
+              var d = new Date()
+              document.write(d.getFullYear());
+          </script>
+          | <a href="https://www.w3schools.com/html/html_intro.asp" target="blank">HTML5</a> 
+          | <a href="https://www.w3schools.com/css/css_intro.asp" target="blank">CSS3</a> 
+          | <a href="http://mwilchek.github.io" target="blank">MRW</a>
+      </div> <!-- footer -->
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="js/scrolling-nav.js"></script>
+
+</body>
+
+</html>
