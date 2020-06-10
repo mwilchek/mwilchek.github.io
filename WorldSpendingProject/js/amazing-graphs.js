@@ -369,7 +369,7 @@ function spendingEducationPercentResponseHandler(response) {
 function spendingEducationPerPersonResponseHandler(response) {
   var data = response.getDataTable();
 
-  var formatter = new google.visualization.NumberFormat({fractionDigits: 0, prefix: '$'});
+  var formatter = new google.visualization.NumberFormat({fractionDigits: 2, prefix: '$'});
   formatter.format(data, 1); //apply formatter to the second column
 
   var options = {
