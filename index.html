@@ -1,1357 +1,1208 @@
-<!DOCTYPE html>
-<html lang="en" class="theme-color-1a77d4 theme-skin-dark">
+<!DOCTYPE html><html lang="en-us" >
+
+
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123729424-2"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-123729424-2');
-    </script>
-	
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="Wowchemy 5.4.0 for Hugo" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+  <meta name="author" content="Matthew Wilchek" />
+  <meta name="description" content="Senior AI Research Manager, Department of Computer Science" />
+  <link rel="alternate" hreflang="en-us" href="https://mwilchek.github.io/" />
+  <meta name="theme-color" content="#1565c0" />
+  <link rel="stylesheet" href="/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  <link rel="stylesheet" href="/css/wowchemy.246129d782c938a644fe2d653d8a976f.css" />
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Matthew Wilchek" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_180x180_fill_lanczos_center_3.png" />
+  <link rel="canonical" href="https://mwilchek.github.io/" />
 
-    <title>Matt Wilchek</title>
+  <meta property="twitter:card" content="summary" />
+  <meta property="og:site_name" content="Matthew Wilchek" />
+  <meta property="og:url" content="https://mwilchek.github.io/" />
+  <meta property="og:title" content="Matthew Wilchek" />
+  <meta property="og:description" content="Human-Centered AI Researcher,         Department of Computer Science" /><meta property="og:image" content="https://mwilchek.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png" />
+  <meta property="twitter:image" content="https://mwilchek.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  <meta property="og:updated_time" content="2030-06-01T13:00:00&#43;00:00" />
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/ico" href="img/favicon.png"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://mwilchek.github.io/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  "url": "https://mwilchek.github.io/"
+}
+</script>
 
-    <!-- Google Fonts -->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fredoka+One">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic">
-
-    <!-- Icon Fonts -->
-    <link rel="stylesheet" type="text/css" href="fonts/map-icons/css/map-icons.min.css">
-    <link rel="stylesheet" type="text/css" href="fonts/icomoon/style.css">
-
-    <!-- Styles -->
-    <link rel="stylesheet" type="text/css" href="js/plugins/jquery.bxslider/jquery.bxslider.css">
-    <link rel="stylesheet" type="text/css" href="js/plugins/jquery.customscroll/jquery.mCustomScrollbar.min.css">
-    <link rel="stylesheet" type="text/css" href="js/plugins/jquery.mediaelement/mediaelementplayer.min.css">
-    <link rel="stylesheet" type="text/css" href="js/plugins/jquery.fancybox/jquery.fancybox.css">
-    <link rel="stylesheet" type="text/css" href="js/plugins/jquery.owlcarousel/owl.carousel.css">
-    <link rel="stylesheet" type="text/css" href="js/plugins/jquery.owlcarousel/owl.theme.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="colors/blue.css">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- Modernizer for detect what features the user’s browser has to offer -->
-    <script type="text/javascript" src="js/libs/modernizr.js"></script>
+  <title>Matthew Wilchek</title>
 </head>
 
-<body class="home header-has-img loading">
+<body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" class="page-wrapper   "  >
+<script src="/js/wowchemy-init.min.8f76bdc9e086322ed5147724ebba3d06.js"></script>
 
-    <div class="mobile-nav">
-        <button class="btn-mobile mobile-nav-close"><i class="rsicon rsicon-close"></i></button>
-    
-        <div class="mobile-nav-inner">
-            <nav id="mobile-nav" class="nav">
-                <ul class="clearfix">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <!--<li><a href="#references">References</a></li> -->
-                    <!--<li><a href="category.html">Blog</a>
-                        <ul>
-                            <li><a href="single-image.html">Image Post</a></li>
-                            <li><a href="single-slider.html">Slider Post</a></li>
-                            <li><a href="single-video.html">Video Post</a></li>
-                            <li><a href="single-audio.html">Audio Post</a></li>
-                            <li><a href="single-vimeo.html">Vimeo Post</a></li>
-                            <li><a href="single-youtube.html">Youtube Post</a></li>
-                            <li><a href="single-dailymotion.html">Dailymotion Post</a></li>
-                            <li><a href="single.html">Without Media Post</a></li>
-                            <li><a href="typography.html">Typography Page</a></li>
-                            <li><a href="404.html">404 Page</a></li>
-                        </ul>
-                    </li>-->
-                    <li><a href="#calendar">Calendar <span></span></a></li>
-                    <li><a href="#contact">Contact <span></span></a></li>
-                </ul>
-            </nav>
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
         </div>
-    </div>
-    <!-- .mobile-nav -->
-    
-    <div class="sidebar sidebar-fixed">
-        <button class="btn-sidebar btn-sidebar-close"><i class="rsicon rsicon-close"></i></button>
-    
-        <div class="widget-area">
-            <aside class="widget widget-profile">
-                <div class="profile-photo">
-                    <img src="img/uploads/rs-photo-v2.jpg" alt="Matt Wilchek"/>
-                </div>
-                <div class="profile-info">
-                    <h2 class="profile-title">Matthew Wilchek</h2>
-    
-                    <h3 class="profile-position">Data Scientist</h3>
-                </div>
-            </aside>
-            <!-- .widget-profile -->
-    
-            <aside class="widget widget_search">
-                <h2 class="widget-title">Search</h2>
-    
-                <form class="search-form">
-                    <label class="ripple">
-                        <span class="screen-reader-text">Search for:</span>
-                        <input class="search-field" type="search" placeholder="Search">
-                    </label>
-                    <input type="submit" class="search-submit" value="Search">
-                </form>
-            </aside>
-            <!-- .widget_search -->
-    
-            <aside class="widget widget_contact">
-                <h2 class="widget-title">Contact Me</h2>
-    
-                <form class="rsForm" action="php/mailsender.php" method="post">
-                    <div class="input-field">
-                        <label>Name</label>
-                        <input type="text" name="rsName" value="">
-                        <span class="line"></span>
-                    </div>
-    
-                    <div class="input-field">
-                        <label>Email</label>
-                        <input type="email" name="rsEmail" value="">
-                        <span class="line"></span>
-                    </div>
-    
-                    <div class="input-field">
-                        <label>Subject</label>
-                        <input type="text" name="rsSubject" value="">
-                        <span class="line"></span>
-                    </div>
-    
-                    <div class="input-field">
-                        <label>Message</label>
-                        <textarea rows="4" name="rsMessage"></textarea>
-                        <span class="line"></span>
-                    </div>
-    
-                    <span class="btn-outer btn-primary-outer ripple">
-                        <input class="rsFormSubmit btn btn-lg btn-primary" type="submit" value="Send">
-                    </span>
-                </form>
-            </aside>
-            <!-- .widget_contact -->
-    
-            <!--<aside class="widget widget-popuplar-posts">
-                <h2 class="widget-title">Popular posts</h2>
-                <ul>
-                    <li>
-                        <div class="post-media"><a href=""><img src="img/uploads/thumb-78x56-1.jpg" alt=""/></a></div>
-                        <h3 class="post-title"><a href="">Standard Post Format With Featured Image</a></h3>
-    
-                        <div class="post-info"><a href=""><i class="rsicon rsicon-comments"></i>56 comments</a></div>
-                    </li>
-                    <li>
-                        <div class="post-media"><a href=""><img src="img/uploads/thumb-78x56-2.jpg" alt=""/></a></div>
-                        <h3 class="post-title"><a href="">Standard Post Format With Featured Image</a></h3>
-    
-                        <div class="post-info"><a href=""><i class="rsicon rsicon-comments"></i>56 comments</a></div>
-                    </li>
-                    <li>
-                        <div class="post-media"><a href=""><img src="img/uploads/thumb-78x56-3.jpg" alt=""/></a></div>
-                        <h3 class="post-title"><a href="">Standard Post Format With Featured Image</a></h3>
-    
-                        <div class="post-info"><a href=""><i class="rsicon rsicon-comments"></i>56 comments</a></div>
-                    </li>
-                </ul>
-            </aside>-->
-            <!-- .widget-popuplar-posts -->
-    
-            <aside class="widget widget_tag_cloud">
-                <h2 class="widget-title">Tag Cloud</h2>
-    
-                <div class="tagcloud">
-                    <a href="" title="1 topic">Data Science</a>
-                    <a href="" title="9 topics">GIS</a>
-                    <a href="" title="10 topics">Analysis</a>
-                    <a href="" title="6 topics">Statistics</a>
-                    <a href="" title="2 topics">Java</a>
-                    <a href="" title="5 topics">Python</a>
-                    <a href="" title="9 topics">Machine Learning</a>
-                </div>
-            </aside>
-            <!-- .widget_tag_cloud -->
-    
-            <!--<aside class="widget widget-recent-posts">
-                <h2 class="widget-title">Recent posts</h2>
-                <ul>
-                    <li>
-                        <div class="post-tag">
-                            <a href="">#Photo</a>
-                            <a href="">#Architect</a>
-                        </div>
-                        <h3 class="post-title"><a href="">Standard Post Format With Featured Image</a></h3>
-    
-                        <div class="post-info"><a href=""><i class="rsicon rsicon-comments"></i>56 comments</a></div>
-                    </li>
-                    <li>
-                        <div class="post-tag">
-                            <a href="">#Photo</a>
-                            <a href="">#Architect</a>
-                        </div>
-                        <h3 class="post-title"><a href="">Standard Post Format With Featured Image</a></h3>
-    
-                        <div class="post-info"><a href=""><i class="rsicon rsicon-comments"></i>56 comments</a></div>
-                    </li>
-                    <li>
-                        <div class="post-tag">
-                            <a href="">#Photo</a>
-                            <a href="">#Architect</a>
-                        </div>
-                        <h3 class="post-title"><a href="">Standard Post Format With Featured Image</a></h3>
-    
-                        <div class="post-info"><a href=""><i class="rsicon rsicon-comments"></i>56 comments</a></div>
-                    </li>
-                </ul>
-            </aside>-->
-            <!-- .widget-recent-posts -->
-    
-            <aside class="widget widget_categories">
-                <h2 class="widget-title">Categories</h2>
-                <ul>
-                    <li><a href="" title="Data Science">Data Science</a> (9)</li>
-                    <li><a href="" title="Data Analysis">Data Analysis</a> (16)</li>
-                    <li><a href="" title="Python">Python</a> (18)</li>
-                    <li><a href="" title="Java">Java</a> (10)</li>
-                    <li><a href="" title="Statistics">Statistics</a> (14)</li>
-                    <li><a href="" title="Macine Learning">Macine Learning</a> (9)</li>
-                </ul>
-            </aside>
-            <!-- .widget_categories -->
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
         </div>
-        <!-- .widget-area -->
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+<div class="page-header">
+ 
+<header class="header--fixed">
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Matthew Wilchek</a>
+      </div>
+
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Matthew Wilchek</a>
+      </div>
+
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        <ul class="navbar-nav d-md-inline-flex">
+         
+          <li class="nav-item">
+            <a class="nav-link " href="/#about" data-target="#about"><span>Home</span></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#projects" data-target="#projects"><span>Projects</span></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#contact" data-target="#contact"><span>Contact</span></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link " href="/uploads/resume.pdf" target="_blank"><span>Resume</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+      </ul>
+
     </div>
-    <!-- .sidebar -->
+  </nav>
+</header>
+  </div>
+  <div class="page-body">
+<span class="js-widget-page d-none"></span>
 
-    <div class="wrapper">
-        <header class="header">
-            <div class="head-bg" style="background-image: url('img/uploads/rs-cover.jpg')"></div>
-        
-            <div class="head-bar">
-                <div class="head-bar-inner">
-                    <div class="row">
-                        <div class="col-sm-3 col-xs-6">
-                            <!--<a class="logo" href="index.html"><span>RS</span>card</a> -->
-                            <!-- <a class="head-logo" href=""><img src="img/rs-logo.png" alt="RScard"/></a> -->
-                        </div>
-        
-                        <div class="col-sm-9 col-xs-6">
-                            <div class="nav-wrap">
-                                <nav id="nav" class="nav">
-                                    <ul class="clearfix">
-                                        <li><a href="#about">About</a></li>
-                                        <li><a href="#skills">Skills</a></li>
-                                        <li><a href="#portfolio">Portfolio</a></li>
-                                        <li><a href="#experience">Experience</a></li>
-                                        <!--<li><a href="#references">References</a></li>-->
-                                        <!--<li><a href="category.html">Blog</a>
-                                            <ul>
-                                                <li><a href="single-image.html">Image Post</a></li>
-                                                <li><a href="single-slider.html">Slider Post</a></li>
-                                                <li><a href="single-video.html">Video Post</a></li>
-                                                <li><a href="single-audio.html">Audio Post</a></li>
-                                                <li><a href="single-vimeo.html">Vimeo Post</a></li>
-                                                <li><a href="single-youtube.html">Youtube Post</a></li>
-                                                <li><a href="single-dailymotion.html">Dailymotion Post</a></li>
-                                                <li><a href="single.html">Without Media Post</a></li>
-                                                <li><a href="typography.html">Typography Page</a></li>
-                                                <li><a href="404.html">404 Page</a></li>
-                                            </ul>
-                                        </li>-->
-                                        <li><a href="#calendar">Calendar <span></span></a></li>
-                                        <li><a href="#contact">Contact <span></span></a></li>
-                                    </ul>
-                                </nav>
-        
-                                <button class="btn-mobile btn-mobile-nav">Menu</button>
-                                <button class="btn-sidebar btn-sidebar-open"><i class="rsicon rsicon-menu"></i></button>
-                            </div>
-                            <!-- .nav-wrap -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- .header -->
-        
-        <div class="content">
-            <div class="container">
-    
-            <!-- START: PAGE CONTENT -->
-            <section id="about" class="section section-about">
-                <div class="animate-up">
-                    <div class="section-box">
-                        <div class="profile">
-                            <div class="row">
-                                <div class="col-xs-5">
-                                    <div class="profile-photo"><img src="img/uploads/rs-photo-v1.jpg" alt="Matt Wilchek"/></div>
-                                </div>
-                                <div class="col-xs-7">
-                                    <div class="profile-info">
-                                        <div class="profile-preword"><span>Hello</span></div>
-                                        <h1 class="profile-title"><span>I'm</span> Matthew Wilchek</h1>
-            
-                                        <h2 class="profile-position">Data Scientist and Geographer</h2></div>
-                                    <ul class="profile-list">
-                                        <li class="clearfix">
-                                            <strong class="title">Age</strong>
-                                            <span class="cont">32</span>
-                                        </li>
-                                        <li class="clearfix">
-                                            <strong class="title">Address</strong>
-                                            <span class="cont">Annandale, VA. 22003.</span>
-                                        </li>
-                                        <li class="clearfix">
-                                            <strong class="title">E-mail</strong>
-                                            <span class="cont"><a href="mailto:mwilchek@gmu.edu">mwilchek@gmu.edu</a></span>
-                                        </li>
-                                        <li class="clearfix">
-                                            <strong class="title">Phone</strong>
-                                            <span class="cont"><a href="tel:eight.60-944-8795">(eight.60) 944-8795</a></span>
-                                        </li>
-                                        <li class="clearfix">
-                                            <strong class="title">Freelance</strong>
-                                            <span class="cont">Not Available</span>
-                                        </li>
-                                        <li class="clearfix">
-                                            <strong class="title"><span class="button">Government Clearance:</span></strong>
-                                            <span class="cont">Active TS/SCI-CI Poly</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!--<div class="profile-social">
-                            <ul class="social">
-                                <li><a class="ripple-centered" href="https://www.facebook.com/Matthew8985" target="https://www.facebook.com/Matthew8985"><i
-                                        class="rsicon rsicon-facebook"></i></a></li>
-                                <li><a class="ripple-centered" href="https://twitter.com" target="_blank"><i
-                                        class="rsicon rsicon-twitter"></i></a></li>
-                                <li><a class="ripple-centered" href="https://www.linkedin.com/in/matthew-wilchek-26539a36/" target="https://www.linkedin.com/in/matthew-wilchek-26539a36/"><i
-                                        class="rsicon rsicon-linkedin"></i></a></li>
-                                <li><a class="ripple-centered" href="https://plus.google.com" target="_blank"><i
-                                        class="rsicon rsicon-google-plus"></i></a></li>
-                                <li><a class="ripple-centered" href="https://dribbble.com" target="_blank"><i
-                                        class="rsicon rsicon-dribbble"></i></a></li>
-                                <li><a class="ripple-centered" href="https://www.instagram.com" target="_blank"><i
-                                        class="rsicon rsicon-instagram"></i></a></li>
-                            </ul>
-                        </div>-->
-                    </div>
-            
-                    <div class="section-txt-btn">
-                        <p><a class="btn btn-lg btn-border ripple" target="_blank"
-                              href="https://github.com/mwilchek/mwilchek.github.io/raw/master/WilchekResume.pdf">Download Resume</a></p>
-            
-                        <p>Experienced Data Scientist in the federal law enforcement and intelligence industry with practical experience leading 
-						and deploying machine learning, data mining, and data visualization solutions; Interested in continued research for my Ph.D. program in 
-						Computer Science with focuses on <b>computer vision and shared perception systems</b>.</p>
-                    </div>
-                </div>
-            </section>
-            <!-- #about -->
-            
-            <section id="skills" class="section section-skills">
-                <div class="animate-up">
-                    <h2 class="section-title">Professional Skills</h2>
-            
-                    <div class="section-box">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="progress-bar">
-                                    <div class="bar-data">
-                                        <span class="bar-title">Python</span>
-                                        <span class="bar-value">80%</span>
-                                    </div>
-                                    <div class="bar-line">
-                                        <span class="bar-fill" data-width="80%"></span>
-                                    </div>
-                                </div>
-                            </div>
-            
-                            <div class="col-sm-6">
-                                <div class="progress-bar">
-                                    <div class="bar-data">
-                                        <span class="bar-title">JavaScript</span>
-                                        <span class="bar-value">52%</span>
-                                    </div>
-                                    <div class="bar-line">
-                                        <span class="bar-fill" data-width="52%"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-            
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="progress-bar">
-                                    <div class="bar-data">
-                                        <span class="bar-title">Java</span>
-                                        <span class="bar-value">70%</span>
-                                    </div>
-                                    <div class="bar-line">
-                                        <span class="bar-fill" data-width="70%"></span>
-                                    </div>
-                                </div>
-                            </div>
-            
-                            <div class="col-sm-6">
-                                <div class="progress-bar">
-                                    <div class="bar-data">
-                                        <span class="bar-title">R</span>
-                                        <span class="bar-value">80%</span>
-                                    </div>
-                                    <div class="bar-line">
-                                        <span class="bar-fill" data-width="80%"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-            
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="progress-bar">
-                                    <div class="bar-data">
-                                        <span class="bar-title">HTML & CSS</span>
-                                        <span class="bar-value">90%</span>
-                                    </div>
-                                    <div class="bar-line">
-                                        <span class="bar-fill" data-width="90%"></span>
-                                    </div>
-                                </div>
-                            </div>
-            
-                            <div class="col-sm-6">
-                                <div class="progress-bar">
-                                    <div class="bar-data">
-                                        <span class="bar-title">ArcGIS</span>
-                                        <span class="bar-value">90%</span>
-                                    </div>
-                                    <div class="bar-line">
-                                        <span class="bar-fill" data-width="90%"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- #skills -->
-            
-            <section id="portfolio" class="section section-portfolio">
-            <div class="animate-up">
-            <h2 class="section-title">Portfolio</h2>
-            
-            <div class="filter">
-                <div class="filter-inner">
-                    <div class="filter-btn-group">
-                        <button data-filter="*">All</button>
-                        <button data-filter=".data">Data Analysis</button>
-                        <button data-filter=".software">Programs</button>
-                    </div>
-                    <div class="filter-bar">
-                        <span class="filter-bar-line"></span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="grid">
-                <div class="grid-sizer"></div>
-            
-                <div class="grid-item size22 data">
-                    <div class="grid-box">
-                        <figure class="portfolio-figure">
-                            <img src="img/uploads/portfolio/portfolio-thumb-06-610x600.jpg" alt=""/>
-                            <figcaption class="portfolio-caption">
-                                <div class="portfolio-caption-inner">
-                                    <h3 class="portfolio-title">Emotional Recognition</h3>
-                                    <h4 class="portfolio-cat">Deep Learning</h4>
-
-                                    <div class="btn-group">
-                                        <a class="btn-link" href="https://github.com/mwilchek/Final-Project-Group10" target="_blank"><i
-                                                class="rsicon rsicon-link"></i></a>
-                                        <a class="portfolioFancybox btn-zoom" data-fancybox-group="portfolioFancybox1"
-                                           href="#portfolio0-inline1"><i class="rsicon rsicon-eye"></i></a>
-                                    </div>
-                                </div>
-                            </figcaption>
-                        </figure>
-
-                        <!-- Start: Portfolio Inline Boxes -->
-                        <div id="portfolio0-inline1" class="fancybox-inline-box">
-                            <div class="inline-embed" data-embed-type="image"
-                                 data-embed-url="img/uploads/portfolio/portfolio-thumb-06-289x281.jpg"></div>
-                            <div class="inline-cont">
-                                <h2 class="inline-title">Graduate School Deep Learning Project that Attempts to Classify Facial Emotions</h2>
-
-                                <div class="inline-text">
-                                    <p>This project attempted to develop a proof of concept to classify one of seven emotions
-                                        from pictures of people that include Anger, Contempt, Disgust, Fear, Happy, Sadness and
-                                        Surprise. After training a Convolutional Neural Network, we then applied our model to
-                                        images of ourselves like in the example above.
-									To view our approach check out our presentation of the project <a href="https://github.com/mwilchek/Final-Project-Group10/blob/main/Final-Group-Presentation/Deep%20Learning_%20Emotion%20Detector.pdf">here</a>.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End: Portfolio Inline Boxes -->
-                    </div>
-                </div>
-                <!-- .grid-item -->
-
-                <div class="grid-item size11 data">
-                    <div class="grid-box">
-                        <figure class="portfolio-figure">
-                            <img src="img/uploads/portfolio/portfolio-thumb-14-610x600.jpg" alt=""/>
-                            <figcaption class="portfolio-caption">
-                                <div class="portfolio-caption-inner">
-                                    <h3 class="portfolio-title">Predicting the Stock Market</h3>
-                                    <h4 class="portfolio-cat">Machine Learning</h4>
-            
-                                    <div class="btn-group">
-                                        <a class="btn-link" href="https://github.com/mwilchek/Stock-Modeling" target="_blank"><i
-                                                class="rsicon rsicon-link"></i></a>
-                                        <a class="portfolioFancybox btn-zoom" data-fancybox-group="portfolioFancybox1"
-                                           href="#portfolio0-inline1A"><i class="rsicon rsicon-eye"></i></a>
-                                        <a class="portfolioFancybox hidden" data-fancybox-group="portfolioFancybox1"
-                                           href="#portfolio0-inline2"></a>
-                                        <a class="portfolioFancybox hidden" data-fancybox-group="portfolioFancybox1"
-                                           href="#portfolio0-inline3"></a>
-                                    </div>
-                                </div>
-                            </figcaption>
-                        </figure>
-            
-                        <!-- Start: Portfolio Inline Boxes -->
-                        <div id="portfolio0-inline1A" class="fancybox-inline-box">
-                            <div class="inline-embed" data-embed-type="iframe"
-                                 data-embed-url="https://mwilchek.shinyapps.io/predicting_the_stock_market/"></div>
-                            <div class="inline-cont">
-                                <h2 class="inline-title">Graduate School Machine Learning Project that Attempts to Predict the Stock Market</h2>
-            
-                                <div class="inline-text">
-                                    <p>This project attempted to develop a proof of concept to predict any stock performance for current day 
-									and following day, based on history and the assumption news sentiment in a given day has a significant relationship.
-									The above shows a Web Application developed in R to visualize the results of our project.
-									To view our approach check out our presentation of the project <a href="https://github.com/mwilchek/Stock-Modeling/blob/master/Final_Presentation.pptx?raw=true">here</a>.</p>
-                                </div>
-                            </div>
-                        </div>
-            
-                        <div id="portfolio0-inline2" class="fancybox-inline-box">
-                            <div class="inline-embed" data-embed-type="image"
-                                 data-embed-url="img/uploads/portfolio/portfolio-thumb-14a-610x600.jpg"></div>
-                            <div class="inline-cont">
-                                <div class="inline-text">
-                                    <h2 class="inline-title">Stock and News Web Scraping</h2>
-            
-                                    <p>In order to create a sufficient supervised machine learning algorithm our project required sufficient data collection. 
-									We extracted stock data using an API from Yahoo Finance and news headline data from a Reddit API called PRAW. Once the data 
-									was collected on a daily basis, we executed a separate sentiment algorithm on the news data using R (that can be found <a href="https://github.com/mwilchek/Stock-Modeling/blob/master/sentiment_extraction.R">here</a>), and joined all to the 
-									master dataset for the algorithm. To view our data collection script click <a href="https://github.com/mwilchek/Stock-Modeling/blob/master/process_reddit.py">here</a>.</p>
-                                </div>
-                            </div>
-                        </div>
-            
-                        <div id="portfolio0-inline3" class="fancybox-inline-box">
-                            <div class="inline-embed" data-embed-type="iframe"
-                                 data-embed-url="https://mwilchek.github.io/Stock_Modeling.html"></div>
-                            <div class="inline-cont">
-                                <div class="inline-text">
-                                    <h2 class="inline-title">Modeling</h2>
-            
-                                    <p>In order to account for changing sentiment on any given day from our previous sentiment 
-									algorithm, we needed to identify the most significant sentiment for the current and 
-									predicted following day for our primary models.	To do so, we leveraged Python Sklearn's 
-									library for a number of machine learning libraries such as Random Forest Regressor, Neural Net Regressor, and Support Vector Machine Regressor. Click here to view a plot for one of our results in a single 
-									execution <a href="https://github.com/mwilchek/Stock-Modeling/blob/master/Tomorrow_Close_RandomForest_Results.png">here</a>.</p>
-									<p>Finally after identifying the most significant sentiment in the given day, we were able 
-									to refine our models for a fit regression. As new data is collected and added to our master dataset, 
-									our train/test prediction model will continually be refined and accuracy improved. To check out our 
-									final algorithm, click <a href="https://github.com/mwilchek/Stock-Modeling/blob/master/Stock_Data_Modeling.py">here</a>.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End: Portfolio Inline Boxes -->
-                    </div>
-                </div>
-                <!-- .grid-item -->
-				
-				<div class="grid-item size11 data">
-                    <div class="grid-box">
-                        <figure class="portfolio-figure">
-                            <img src="img/uploads/portfolio/portfolio-thumb-05-610x600.jpg" alt=""/>
-                            <figcaption class="portfolio-caption">
-                                <div class="portfolio-caption-inner">
-                                    <h3 class="portfolio-title">Visualizing Climate Change</h3>
-                                    <h4 class="portfolio-cat">Data Visualization</h4>
-            
-                                    <div class="btn-group">
-                                        <a class="btn-link" href="https://mwilchek.shinyapps.io/gwu_data_science_exploring_climate_change/#1" target="_blank"><i
-                                                class="rsicon rsicon-link"></i></a>
-                                        <a class="portfolioFancybox btn-zoom" data-fancybox-group="portfolioFancybox1"
-                                           href="#portfolio1-inline1"><i class="rsicon rsicon-eye"></i></a>
-                                        <a class="portfolioFancybox hidden" data-fancybox-group="portfolioFancybox1"
-                                           href="#portfolio1-inline2"></a>
-                                        <a class="portfolioFancybox hidden" data-fancybox-group="portfolioFancybox1"
-                                           href="#portfolio1-inline3"></a>
-                                    </div>
-                                </div>
-                            </figcaption>
-                        </figure>
-            
-                        <!-- Start: Portfolio Inline Boxes -->
-                        <div id="portfolio1-inline1" class="fancybox-inline-box">
-                            <div class="inline-embed" data-embed-type="image"
-                                 data-embed-url="img/uploads/portfolio/portfolio-thumb-01-289x281.jpg"></div>
-                            <div class="inline-cont">
-                                <h2 class="inline-title">This project tries to investigate for a linear relationship 
-                                    between global average temperature and time, using linear regression.</h2>
-            
-                                <div class="inline-text">
-                                    <p> The team gathered climate data from <a href="http://berkeleyearth.org/">Berkeley Earth</a>, and 
-									    focused on global land temperatures for the analysis. Data is available from 1750-2013. 
-                                        Our analysis and climate predictions are presented through ArcGIS and a R Shiny web application. All source 
-										code is availble in our Github repository <a href="https://github.com/mwilchek/GWU_Project.AnalyzingClimateChange">here</a>.</p>
-                                </div>
-                            </div>
-                        </div>
-            
-                        <div id="portfolio1-inline2" class="fancybox-inline-box">
-                            <div class="inline-embed" data-embed-type="iframe"
-                                 data-embed-url="http://www.arcgis.com/apps/View/index.html?appid=a29ddc77e43a4013a982d08d8344cb6b"></div>
-                            <div class="inline-cont">
-                                <div class="inline-text">
-                                    <h2 class="inline-title">U.S. Temperatures</h2>
-            
-                                    <p>By using ArcGIS, I developed two interactive web map application to help visualize how CONUS temperatures 
-									   changed over the years in major cities. The shapefiles used for the application can also be found in 
-									   the Github repository <a href="https://github.com/mwilchek/GWU_Project.AnalyzingClimateChange">here</a>.</p>
-									<p>Below are where the 2 applications can be viewed:</p>
-									<ul>
-										<li><a href="http://www.arcgis.com/apps/View/index.html?appid=a29ddc77e43a4013a982d08d8344cb6b">
-										http://www.arcgis.com/apps/View/index.html?appid=a29ddc77e43a4013a982d08d8344cb6b</a></li>
-										<li><a href="http://www.arcgis.com/apps/StorytellingSwipe/index.html?appid=bd128209373d4b8a850f05310cbe0a6e#">
-										http://www.arcgis.com/apps/StorytellingSwipe/index.html?appid=bd128209373d4b8a850f05310cbe0a6e#</a></li>
-									</ul>
-                                </div>
-                            </div>
-                        </div>
-            
-                        <div id="portfolio1-inline3" class="fancybox-inline-box">
-                            <div class="inline-embed" data-embed-type="image"
-                                 data-embed-url="img/uploads/portfolio/portfolio-thumb-13-610x600.jpg"></div>
-                            <div class="inline-cont">
-                                <div class="inline-text">
-                                    <h2 class="inline-title">Analyzing Models and Interpreting Results</h2>
-            
-                                    <p>The 1975-2013 model is Y = -49.148211+0.048966X, with both the coefficient and intercept 
-									   statistically significant at the alpha <0.05 level. The overall model has a statistically 
-                                       F-statistic as well and is a good fit. The adjusted R^2 = 0.7813. While this R^2 is not 
-									   as good as the first, it is still an acceptable R^2. </p>
-									<p>From an R^2 perspective, model 1 has the best result. However, from an interpretation 
-									   standpoint, the coefficient for time in Model 1 is close to 0 and thus shows just a small 
-									   rise in temperature. This model does not provide a good fit to recent temperatures while 
-									   Model 4 does. To check out our predictions for future temperatures using Model 4, check out
-									   our web application <a href="https://mwilchek.shinyapps.io/gwu_data_science_exploring_climate_change/#1">here</a>.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End: Portfolio Inline Boxes -->
-                    </div>
-                </div>
-                <!-- .grid-item -->
-            
-                <div class="grid-item size11 data">
-                    <div class="grid-box">
-                        <figure class="portfolio-figure">
-                            <img src="img/uploads/portfolio/portfolio-thumb-11-289x281.jpg" alt=""/>
-                            <figcaption class="portfolio-caption">
-                                <div class="portfolio-caption-inner">
-                                    <h3 class="portfolio-title">R Statistical Analysis</h3>
-                                    <h4 class="portfolio-cat">Exploratory Data Analysis</h4>
-            
-                                    <div class="btn-group">
-                                        <a class="btn-link" href="http://rpubs.com/mwilchek/assignment2" target="_blank"><i
-                                                class="rsicon rsicon-link"></i></a>
-                                        <a class="portfolioFancybox btn-zoom" data-fancybox-group="portfolioFancybox2"
-                                           href="#portfolio2-inline1"><i class="rsicon rsicon-eye"></i></a>
-                                    </div>
-                                </div>
-                            </figcaption>
-                        </figure>
-            
-                        <!-- Start: Portfolio Inline Boxes -->
-                        <div id="portfolio2-inline1" class="fancybox-inline-box">
-                            <div class="inline-cont">
-                                <h2 class="inline-title">Learning R - Statistical Computing</h2>
-            
-                                <div class="inline-text">
-                                    <p>This was one of my early assignments as I started my graduate degree in Data Science. The 
-										The class focused on learning the epicycle of data analysis and using R Statistical Computing
-										to strenghten quantitative analysis skills. To see the results of my analysis click 
-										<a href="http://rpubs.com/mwilchek/assignment2">here</a>.</p>
-										
-                                    <p>In this assignment I performed an exploratory data analysis on a population of women who were 
-										at least 21 years old, of Pima Indian heritage and living near Phoenix, Arizona, and were tested for 
-										diabetes according to World Health Organization criteria. The data was collected by the US 
-										National Institute of Diabetes and Digestive and Kidney Diseases. It comprises of 532 complete 
-										records after dropping the (mainly missing) data on serum insulin. More information on the dataset
-										can be found <a href="https://stat.ethz.ch/R-manual/R-devel/library/MASS/html/Pima.tr.html">here</a>.</p>
-								</div>
-                            </div>
-                        </div>
-                        <!-- End: Portfolio Inline Boxes -->
-                    </div>
-                </div>
-                <!-- .grid-item -->
-            
-                <div class="grid-item size11 software">
-                    <div class="grid-box">
-                        <figure class="portfolio-figure">
-                            <img src="img/uploads/portfolio/portfolio-thumb-08-289x281.jpg" alt=""/>
-                            <figcaption class="portfolio-caption">
-                                <div class="portfolio-caption-inner">
-                                    <h3 class="portfolio-title">Custom Java Program</h3>
-                                    <h4 class="portfolio-cat">Data Management and Automation</h4>
-            
-                                    <div class="btn-group">
-                                        <a class="btn-link" href="https://github.com/mwilchek" target="_blank"><i
-                                                class="rsicon rsicon-link"></i></a>
-                                        <a class="portfolioFancybox btn-zoom" data-fancybox-group="portfolioFancybox3"
-                                           href="#portfolio3-inline1"><i class="rsicon rsicon-eye"></i></a>
-										<a class="portfolioFancybox hidden" data-fancybox-group="portfolioFancybox3"
-                                           href="#portfolio3-inline2"></a>
-                                    </div>
-                                </div>
-                            </figcaption>
-                        </figure>
-            
-                        <!-- Start: Portfolio Inline Boxes -->
-                        <div id="portfolio3-inline1" class="fancybox-inline-box">
-						<div class="inline-embed" data-embed-type="iframe"
-                                 data-embed-url="https://www.youtube.com/embed/YvK6Mndy7Y0"></div>
-                            <div class="inline-cont">
-                                <h2 class="inline-title">User Account Management for Applications</h2>
-            
-                                <div class="inline-text">
-                                    <p><a href="https://github.com/mwilchek/Application-Account_v4/tree/master/src">
-									https://github.com/mwilchek/Application-Account_v4/tree/master/src</a></p>
-									<p>This was one of my early Java programs I developed as I was learning Computer 
-									Science. For this assignment I created a Java application that leveraged JavaFX for a 
-									graphical user interface (GUI). I also leveraged various data structures such as Heap, 
-									Priority Queue, Binary Search Tree, and Weighted Graph. For this particular assignment, 
-									I also integrated some of the Google API Geo-coding files as well as an Ant Colony 
-									Optimization (ACO) Algorithm to increase performance and create more precise directional paths.</p>
-									<p>The application can also save data locally through a .dat binary file and re-load 
-									the same information during a later execution. Feel free to check out the source 
-									code to learn more.</p>
-								</div>
-							</div>
-						</div>
-						<div id="portfolio3-inline2" class="fancybox-inline-box">
-                            <div class="inline-cont">
-                                <h2 class="inline-title">Java Programming - Shortcut to Your Favorites</h2>
-            
-                                <div class="inline-text">
-                                    <p><a href="https://github.com/mwilchek/CSC_Homework3/blob/master/OpenFavorites.java">
-									https://github.com/mwilchek/CSC_Homework3/blob/master/OpenFavorites.java</a></p>
-									<p>This was one of my early Java programs I developed as I was learning Computer 
-									Science. While, this program does not have much to do with data analysis, I wanted 
-									to include it on my site to share with everyone because it is quite handy.</p>
-									<p>Once executed the first time, this program will prompt the user to paste in 
-									the URLs of their favorite websites. After, it will open their default web browser with 
-									all of the sites the user listed. The next time the user runs the program, it will have 
-									saved the first list and can open the favorite sites again immediately.</p>
-								</div>
-							</div>
-						</div>
-                        <!-- End: Portfolio Inline Boxes -->
-                    </div>
-                </div>
-                <!-- .grid-item -->
-            </div>
-            
-            <div class="grid-more">
-                <span class="ajax-loader"></span>
-                <button class="btn btn-border ripple"><i class="rsicon rsicon-add"></i></button>
-            </div>
-            </div>
-            </section>
-            <!-- #portfolio -->
-            
-            <section id="experience" class="section section-experience">
-                <div class="animate-up">
-                    <h2 class="section-title">Work Experience</h2>
-            
-                    <div class="timeline">
-                        <div class="timeline-bar"></div>
-                        <div class="timeline-inner clearfix">
-            
-                            <div class="timeline-box timeline-box-right">
-                                <span class="dot"></span>
-            
-                                <div class="timeline-box-inner animate-left">
-                                    <span class="arrow"></span>
-            
-                                    <div class="date">2017 - 2020</div>
-                                    <h3>DHS - Immigration and Customs Enforcement (ICE)</h3>
-                                    <h4>Senior Operations Research Analyst (Federal Position - Permanent)</h4>
-            
-                                    <p>Support the Systems and Operational Analysis Unit under ICE's Field 
-									Operations through designing and editing advance statistical programs and 
-									simulation models using machine learning in R and Python.</p>
-                                </div>
-                            </div>
-							
-							<div class="timeline-box timeline-box-left">
-                                <span class="dot"></span>
-								
-								<div class="timeline-box-inner animate-right">
-                                    <span class="arrow"></span>
-            
-                                    <div class="date">2020 - Present</div>
-                                    <h3>U.S. Army - DEVCOM</h3>
-                                    <h4>Data Scientist (Federal Position - Permanent)</h4>
-            
-                                    <p>Develop augmented reality (AR) experiences with Computer Vision AI 
-									for the Integrated Visual Augmentation System (IVAS) (Microsoft HoloLens) 
-									for soldiers that control & command various air systems</p>
-                                </div>
-                            </div>
-							
-							<div class="timeline-box timeline-box-right">
-                                <span class="dot"></span>
-            
-                                <div class="timeline-box-inner animate-left">
-                                    <span class="arrow"></span>
-            
-                                    <div class="date">2016 - 2017</div>
-                                    <h3>U.S. Census Bureau - Geography Dvision</h3>
-                                    <h4>Geographer (Federal Position - Term)</h4>
-            
-                                    <p>Supported a research and development branch with
-										updating and innovating Big Data, while improving data
-										visualization methodologies leveraging various programming languages. </p>
-                                </div>
-                            </div>
-            
-                            <div class="timeline-box timeline-box-left">
-                                <span class="dot"></span>
-            
-                                <div class="timeline-box-inner animate-right">
-                                    <span class="arrow"></span>
-            
-                                    <div class="date">2015 - 2016</div>
-                                    <h3>USDA - Foreign Agricultural Service</h3>
-                                    <h4>Web/GIS Developer (Federal Position - Term)</h4>
-            
-                                    <p>Acted as the primary technology liaison/business analyst for
-										the Disaster Assistance division's Office of the Director. Developed and 
-										co-authored multiple web GIS Story Map applications used to showcase 
-										international projects by the agency.</p>
-                                </div>
-                            </div>
-            
-                            <div class="timeline-box timeline-box-right">
-                                <span class="dot"></span>
-            
-                                <div class="timeline-box-inner animate-left">
-                                    <span class="arrow"></span>
-            
-                                    <div class="date">2012 - 2015</div>
-                                    <h3>Northrop Grumman</h3>
-                                    <h4>Web Developer / Intel Analyst</h4>
-            
-                                    <p>Held multiple positions ranging from web development for classified projects/clients 
-										to researching and analyzing competitve business intelligence to support business 
-										development and procurement.</p>
-                                </div>
-                            </div>
-            
-                            <div class="timeline-box timeline-box-left">
-                                <span class="dot"></span>
-            
-                                <div class="timeline-box-inner animate-right">
-                                    <span class="arrow"></span>
-            
-                                    <div class="date">2012 - 2012</div>
-                                    <h3>Northrop Grumman</h3>
-                                    <h4>Intern</h4>
-            
-                                    <p>Assisted Senior Solution Architects with the development of
-										open-source intelligence (OSINT) analytical software by
-										performing operational research, planning analysis, and
-										financial intelligence (FININT) analysis such as predictive
-										analytics</p>
-                                </div>
-                            </div>
-            
-                            <div class="timeline-box timeline-box-right">
-                                <span class="dot"></span>
-            
-                                <div class="timeline-box-inner animate-left">
-                                    <span class="arrow"></span>
-            
-                                    <div class="date">2011 - 2012</div>
-                                    <h3>U.S. Treasury - Financial Crimes Enforcement Network (FinCEN)</h3>
-                                    <h4>Intel Analyst Intern</h4>
-            
-                                    <p>Studied trends and patterns, assisted in identifying intelligence gaps 
-										on global financial transactions activities in support of the prevention 
-										of financial crimes with senior intelligence analysts; including krypto-
-										currency trends such as bitcoin</p>
-                                </div>
-                            </div>
+  <section id="about" class="home-section wg-about  "  >
+   <div class="home-section-bg " >
      
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- #experience -->
-            
-            <section id="education" class="section section-education">
-                <div class="animate-up">
-                    <h2 class="section-title">Education</h2>
-            
-                    <div class="timeline">
-                        <div class="timeline-bar"></div>
-                        <div class="timeline-inner clearfix">
-            
-                            <div class="timeline-box timeline-box-compact timeline-box-left">
-                                <span class="dot"></span>
-            
-                                <div class="timeline-box-inner animate-right">
-                                    <span class="arrow"></span>
-            
-                                    <div class="date"><span>2022 - Present</span></div>
-                                    <h3>Ph.D. in Computer Science</h3>
-                                    <h4>Virginia Polytechnic Institute and State University</h4>
-                                </div>
-                            </div>
-							
-							<div class="timeline-box timeline-box-compact timeline-box-right">
-                                <span class="dot"></span>
-            
-                                <div class="timeline-box-inner animate-left">
-                                    <span class="arrow"></span>
-            
-                                    <div class="date"><span>2017 - 2021</span></div>
-                                    <h3>Master of Science in Data Science</h3>
-                                    <h4>George Washington University</h4>
-                                </div>
-                            </div>
-            
-                            <div class="timeline-box timeline-box-compact timeline-box-right">
-                                <span class="dot"></span>
-            
-                                <div class="timeline-box-inner animate-left">
-                                    <span class="arrow"></span>
-            
-                                    <div class="date"><span>2016 - 2016</span></div>
-                                    <h3>1 Week Course in Project Management for the PMP Certification</h3>
-                                    <h4>Project Management Institute (PMI)</h4>
-                                </div>
-                            </div>
-            
-                            <div class="timeline-box timeline-box-compact timeline-box-left">
-                                <span class="dot"></span>
-            
-                                <div class="timeline-box-inner animate-right">
-                                    <span class="arrow"></span>
-            
-                                    <div class="date"><span>2014 - 2017</span></div>
-                                    <h3>Associate of Science in Computer Science</h3>
-                                    <h4>Northern Virginia Community College</h4>
-                                </div>
-                            </div>
-            
-                            <div class="timeline-box timeline-box-compact timeline-box-left">
-                                <span class="dot"></span>
-            
-                                <div class="timeline-box-inner animate-right">
-                                    <span class="arrow"></span>
-            
-                                    <div class="date"><span>2008 - 2012</span></div>
-                                    <h3>Bachelor of Arts in International Affairs</h3>
-                                    <h4>George Mason University</h4>
-                                </div>
-                            </div>
-            
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- #education -->
-            
-			<!-- When you want to add official references for work:
-            <section id="references" class="section section-references">
-                <div class="animate-up">
-                    <h2 class="section-title">References</h2>
-            
-                    <div class="section-box">
-                        <ul class="ref-slider">
-                            <li>
-                                <div class="ref-box">
-                                    <div class="person-speech">
-                                        <p>I confirm that I have dealt with New Company Ltd since 1998. Their work has been a major
-                                            factor in our
-                                            website's success, helping it to become one of the most visited resources of its kind on
-                                            the Internet.</p>
-                                    </div>
-                                    <div class="person-info clearfix">
-                                        <img class="person-img" src="img/uploads/rs-avatar-60x60.jpg" alt="Headshot">
-            
-                                        <div class="person-name-title">
-                                            <span class="person-name">Alexander Jokovich</span>
-                                            <span class="person-title">Modern LLC , HR</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="ref-box">
-                                    <div class="person-speech">
-                                        <p>I confirm that New Company Ltd has been a customer of ours since 1998, during which time
-                                            they have always made payments reliably,
-                                            in full and on time.</p>
-                                    </div>
-                                    <div class="person-info clearfix">
-                                        <img class="person-img" src="img/uploads/rs-avatar-60x60.jpg" alt="Headshot">
-            
-                                        <div class="person-name-title">
-                                            <span class="person-name">Alexander Jokovich</span>
-                                            <span class="person-title">Modern LLC , HR</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="ref-box">
-                                    <div class="person-speech">
-                                        <p>I have known Robert Smith for 10 years as web developer. I can confirm that he is a man
-                                            of great integrity, is extremely dedicated
-                                            to his family and work, and is entirely peace-loving.</p>
-                                    </div>
-                                    <div class="person-info clearfix">
-                                        <img class="person-img" src="img/uploads/rs-avatar-60x60.jpg" alt="Headshot">
-            
-                                        <div class="person-name-title">
-                                            <span class="person-name">Alexander Jokovich</span>
-                                            <span class="person-title">Modern LLC , HR</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="ref-slider-nav">
-                            <span id="ref-slider-prev" class="slider-prev"></span>
-                            <span id="ref-slider-next" class="slider-next"></span>
-                        </div>
-                    </div>
-                </div>
-            </section> -->
-            <!-- #references -->
-            
+   </div>
+    <div class="container">
+
+<div class="row">
+  <div class="col-12 col-lg-4">
+    <div id="profile">
+  
+      <img class="avatar avatar-circle"
+           width="270" height="270"
+           src="/authors/admin/avatar_hu92cd88c897b4b5466eba275ce02185ea_111933_270x270_fill_q75_lanczos_center.jpg" alt="Matthew Wilchek">
+
+      <div class="portrait-title">
+        
+        <h2>Matthew Wilchek</h2>
+        
+        <h3>Senior AI Research Manager, Department of Computer Science</h3>
+
+        <h3>
+          <a href="https://cs.vt.edu/" target="_blank" rel="noopener">
+          <span>Virginia Tech</span>
+          </a>
+        </h3>
+        
+      </div>
+
+      <ul class="network-icon" aria-hidden="true">
+
+        <li>
+          <a href="/#contact"  aria-label="envelope">
+            <i class="fas fa-envelope big-icon"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://scholar.google.com/citations?user=_5P5K6YAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener" aria-label="graduation-cap">
+            <i class="fas fa-graduation-cap big-icon"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://github.com/mwilchek" target="_blank" rel="noopener" aria-label="github">
+            <i class="fab fa-github big-icon"></i>
+          </a>
+        </li>
+        <li>
+          <a href="www.linkedin.com/in/matthew-wilchek-1b52b3207" target="_blank" rel="noopener" aria-label="linkedin">
+            <i class="fab fa-linkedin big-icon"></i>
+          </a>
+        </li>        
+      </ul>
+
+    </div>
+  </div>
+  <div class="col-12 col-lg-8">
+
+    <h1>Biography</h1>
+
+    <div class="article-style">
+      <p>I am a Ph.D. candidate in the Department of Computer Science at Virginia Tech, focusing on <b>computer vision</b>, <b>distributed AI</b>, and <b>human–AI teaming</b>. I am advised by <a href="https://crowd.cs.vt.edu/kurt-luther" target="_blank">Dr. Kurt Luther</a> in the <a href="https://crowd.cs.vt.edu" target="_blank">Crowd Intelligence Lab</a> and by <a href="https://ai.bse.vt.edu/People.html" target="_blank">Dr. Feras Batarseh</a> in the <a href="https://ai.bse.vt.edu/" target="_blank">A3 Lab</a>. During my doctoral studies, I also still serve as a Data Scientist and AI Research Engineer at the U.S. Army DEVCOM C5ISR Center, where I lead innovation projects in embedded vision, augmented reality, and AI-enabled threat recognition.</p>
+
+      <p>My research bridges technical development and applied deployment, exploring <b>trustworthy AI</b>, <b>shared perception platforms</b>, and <b>crowd-in-the-loop methods</b> to support decision-making in cyber-physical systems. My research has been published at top-tier HCI conferences and journals like <b>IUI</b>, <b>CHI</b>, and <b>EAAI</b>.</p>
+
+      <p>I bring expertise in leading cross-disciplinary teams, managing large-scale R&D portfolios across <b>TRL 6.2–6.3</b>, and aligning advanced AI methods with mission-critical needs. I am currently seeking opportunities as a <b>Senior Technical Project Manager</b> or <b>AI R&D Manager</b>, where I can combine my research expertise with program leadership to drive innovation and deliver transitionable solutions.</p>
+
+
+    <h1>Publications</h1>
+
+    <ol>
+      <li>
+        <p>
+          <b>M. Wilchek</b>, M. Nguyen, Y. Wang, K. Luther, and F. A. Batarseh. 2025. 
+          <a href="https://doi.org/10.1145/3746644" target="_blank">
+            PerceptiSync: Trustworthy Object Detection using Crowds-in-the-Loop for Cyber-Physical Systems.
+          </a>
+          <i>ACM Transactions on Cyber-Physical Systems, Jul 2025.</i> 
+          <b>(ACM TCPS)</b> <br>
+          <ul>
+            <li>Introduces PerceptiSync, a framework for integrating human feedback into AI-driven object detection pipelines.</li>
+            <li>Evaluates system performance and trust calibration across distributed sensing platforms.</li>
+          </ul>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <b>M. Wilchek</b>, L. Wang, S. Dickinson, E. Feuerbacher, K. Luther, and F. A. Batarseh. 2025. 
+          <a href="https://doi.org/10.1145/3708359.3712107" target="_blank">
+            KHAIT: K-9 Handler Artificial Intelligence Teaming for Collaborative Sensemaking.
+          </a>
+          <i>Proceedings of the 30th International Conference on Intelligent User Interfaces (IUI '25).</i> 
+          Association for Computing Machinery, New York, NY, USA, 925–937. 
+          <b>(ACM IUI 2025)</b> <br>
+          <ul>
+            <li>Presents KHAIT, a system for augmenting canine search-and-rescue operations with AI-enabled sensing and AR interfaces.</li>
+            <li>Demonstrates collaborative decision-making between handlers, dogs, and AI agents.</li>
+          </ul>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <b>M. Wilchek</b>, K. Luther, and F. A. Batarseh. 2025. 
+          <a href="https://doi.org/10.1145/3690829" target="_blank">
+            Ajna: A Wearable Shared Perception System for Extreme Sensemaking.
+          </a>
+          <i>ACM Transactions on Interactive Intelligent Systems (TiiS), Mar 2025.</i> 
+          <b>(ACM TiiS)</b> <br>
+          <ul>
+            <li>Introduces Ajna, a wearable AR platform that enables distributed teams to share AI-driven perception in extreme environments.</li>
+            <li>Evaluates system scalability and human-AI collaboration dynamics in simulated field scenarios.</li>
+          </ul>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <b>M. Wilchek</b>, W. Hanley, J. Lim, K. Luther, and F. A. Batarseh. 2023. 
+          <a href="https://doi.org/10.1016/j.engappai.2023.106376" target="_blank">
+            Human-in-the-Loop for Computer Vision Assurance: A Survey.
+          </a>
+          <i>Engineering Applications of Artificial Intelligence, Vol 123, Part B, 2023, 106376.</i> 
+          <b>(EAAI 2023)</b> <br>
+          <ul>
+            <li>Comprehensive survey of 100 human-in-the-loop methods for AI assurance in computer vision systems.</li>
+            <li>Highlights gaps in trust, explainability, and evaluation metrics for mission-critical AI deployments.</li>
+          </ul>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <b>M. Wilchek</b> and Y. Wang. 2021. 
+          <a href="https://doi.org/10.1109/ISPA-BDCloud-SocialCom-SustainCom52081.2021.00211" target="_blank">
+            Synthetic Differential Privacy Data Generation for Revealing Bias Modelling Risks.
+          </a>
+          <i>IEEE Intl Conf on Parallel & Distributed Processing with Applications, Big Data & Cloud Computing, Sustainable Computing & Communications, Social Computing & Networking (ISPA/BDCloud/SocialCom/SustainCom), New York City, USA, 2021, pp. 1574-1580.</i> 
+          <b>(IEEE ISPA 2021)</b> <br>
+          <ul>
+            <li>Proposes a synthetic data generation approach to evaluate bias modeling risks under differential privacy constraints.</li>
+            <li>Demonstrates applications for sensitive data environments and fairness analysis.</li>
+          </ul>
+        </p>
+      </li>
+    </ol>
+
+    <h3><i class="fas fa-download  pr-1 fa-fw"></i> Download my <a href="/uploads/resume.pdf" target="_blank">resumé</a></h3>
+
+    </div>
+
+    <div class="row">
+
+      
+      <div class="col-md-5">
+        <div class="section-subheading">Interests</div>
+        <ul class="ul-interests mb-0">
           
-            <!-- If you have blog content add it here:
-			<section id="blog" class="section section-blog">
-                <div class="animate-up">
-                    <h2 class="section-title">From The Blog</h2>
-            
-                    <div class="blog-grid">
-                        <div class="grid-sizer"></div>
-                        <div class="grid-item">
-                            <article class="post-box">
-                                <div class="post-media">
-                                    <div class="post-image">
-                                        <a href="single.html"><img src="img/uploads/thumb-449x286-1.jpg" alt=""> </a>
-                                    </div>
-                                </div>
-            
-                                <div class="post-data">
-                                    <time class="post-datetime" datetime="2015-03-13T07:44:01+00:00">
-                                        <span class="day">03</span>
-                                        <span class="month">MAY</span>
-                                    </time>
-            
-                                    <div class="post-tag">
-                                        <a href="">#Photo</a>
-                                        <a href="">#Architect</a>
-                                    </div>
-            
-                                    <h3 class="post-title">
-                                        <a href="single-image.html">Image Post</a>
-                                    </h3>
-            
-                                    <div class="post-info">
-                                        <a href=""><i class="rsicon rsicon-user"></i>by admin</a>
-                                        <a href=""><i class="rsicon rsicon-comments"></i>56</a>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-            
-                        <div class="grid-item">
-                            <article class="post-box">
-                                <div class="post-media">
-                                    <div class="post-image">
-                                        <a href="single-vimeo.html">
-                                            <img src="img/uploads/thumb-449x286-5.jpg" alt="">
-                                            <span class="post-type-icon"><i class="rsicon rsicon-play"></i></span>
-                                        </a>
-                                    </div>
-                                </div>
-            
-                                <div class="post-data">
-                                    <time class="post-datetime" datetime="2015-03-13T07:44:01+00:00">
-                                        <span class="day">03</span>
-                                        <span class="month">MAY</span>
-                                    </time>
-            
-                                    <div class="post-tag">
-                                        <a href="">#Photo</a>
-                                        <a href="">#Architect</a>
-                                    </div>
-            
-                                    <h3 class="post-title">
-                                        <a href="single-vimeo.html">Vimeo Video Post</a>
-                                    </h3>
-            
-                                    <div class="post-info">
-                                        <a href=""><i class="rsicon rsicon-user"></i>by admin</a>
-                                        <a href=""><i class="rsicon rsicon-comments"></i>56</a>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                </div>
-            </section> -->
-            <!-- #blog -->
-            
-            <!--<<section id="text-section" class="section section-text">
-                <div class="animate-up animated">
-                    <h2 class="section-title">Text Section</h2>
-            
-                    <div class="section-box">
-                        <!--<p> </p>  # Add additional text about anything here if wanted
-                    </div>
-                </div>
-            </section> -->
-            <!-- #text-section -->
-            
-            <section id="interests" class="section section-interests">
-                <div class="animate-up">
-                    <h2 class="section-title">My Interests</h2>
-            
-                    <div class="section-box">
-                        <p>During my free time, I like to do side projects in machine learning and penetration testing. 
-                            <br/>I also enjoy traveling, computer gaming and have snowboarded since I was little.</p>
-            
-                        <ul class="interests-list">
-                            <li>
-                                <i class="map-icon map-icon-bicycling"></i>
-                                <span>Mountain Biking</span>
-                            </li>
-                            <li>
-                                <i class="map-icon map-icon-university"></i>
-                                <span>Finishing Grad School</span>
-                            </li>
-                            <li>
-                                <i class="map-icon map-icon-skateboarding"></i>
-                                <span>Skateboarding</span>
-                            </li>
-                            <li>
-                                <i class="map-icon map-icon-snowboarding"></i>
-                                <span>Snowboarding</span>
-                            </li>
-                            <li>
-                                <i class="map-icon map-icon-electronics-store"></i>
-                                <span>Computer Gaming</span>
-                            </li>
-                            <li>
-                                <i class="map-icon map-icon-shield"></i>
-                                <span>Penetration Testing</span>
-                            </li>
-                            <li>
-                                <i class="map-icon map-icon-climbing"></i>
-                                <span>Rock Climbing</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <!-- #interests -->
-            
-            <section id="calendar" class="section section-calendar">
-                <div class="animate-up">
-                    <h2 class="section-title">Availability Calendar</h2>
-            
-                    <div id="busyCalendar" class="calendar-busy">
-                        <div class="calendar-today" style="background-image: url('img/uploads/rs-calendar-cover.jpg')">
-                            <div class="valign-outer">
-                                <div class="valign-middle">
-                                    <div class="valign-inner">
-                                        <div class="date">
-                                            <span class="day"></span>
-                                            <span class="month"></span>
-                                        </div>
-                                        <div class="week-day"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-            
-                        <div class="calendar-cont">
-                            <div class="calendar-header">
-                                <div class="calendar-nav">
-                                    <span class="active-date"><span class="active-month"></span><span
-                                            class="active-year"></span></span>
-                                    <a class="calendar-prev ripple-centered" title="Prev"><i class="rsicon rsicon-chevron_left"></i></a>
-                                    <a class="calendar-next ripple-centered" title="Next"><i
-                                            class="rsicon rsicon-chevron_right"></i></a>
-                                </div>
-                            </div>
-            
-                            <table class="calendar-body">
-                                <thead class="calendar-thead"></thead>
-                                <tbody class="calendar-tbody"></tbody>
-                            </table>
-                            <div class="calendar-busy-note">Sorry. I'm not available on those days</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- #calendar -->
-            
-            <section id="contact" class="section section-contact">
-                <div class="animate-up">
-                    <h2 class="section-title">Contact Me</h2>
-            
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="section-box contact-form">
-                                <h3>Feel free to contact me</h3>
-            
-                                <form class="rsForm" action="php/mailsender.php" method="post">
-                                    <div class="input-field">
-                                        <label>Name</label>
-                                        <input type="text" name="rsName" value="">
-                                        <span class="line"></span>
-                                    </div>
-            
-                                    <div class="input-field">
-                                        <label>Email</label>
-                                        <input type="email" name="rsEmail" value="">
-                                        <span class="line"></span>
-                                    </div>
-            
-                                    <div class="input-field">
-                                        <label>Subject</label>
-                                        <input type="text" name="rsSubject" value="">
-                                        <span class="line"></span>
-                                    </div>
-            
-                                    <div class="input-field">
-                                        <label>Message</label>
-                                        <textarea rows="4" name="rsMessage"></textarea>
-                                        <span class="line"></span>
-                                    </div>
-            
-                                    <span class="btn-outer btn-primary-outer ripple">
-                                        <input class="rsFormSubmit btn btn-lg btn-primary" type="submit" value="Send">
-                                    </span>
-                                </form>
-                            </div>
-                        </div>
-            
-                        <div class="col-sm-6">
-                            <div class="section-box contact-info has-map">
-                                <ul class="contact-list">
-                                    <li class="clearfix">
-                                        <strong>Address</strong>
-                                        <span>Falls Church, VA. 22042</span>
-                                    </li>
-                                    <li class="clearfix">
-                                        <strong>phone</strong>
-                                        <span><a href="tel:8609448795">(eight.60) 944-8795</a></span>
-                                    </li>
-                                    <li class="clearfix">
-                                        <strong>E-mail</strong>
-                                        <span><a href="mailto:mwilchek@gmu.edu">mwilchek@gmu.edu</a></span>
-                                    </li>
-                                </ul>
-            
-                                <div id="map" data-latitude="38.866502" data-longitude="-77.202683"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- #contact -->
-            <!-- END: PAGE CONTENT -->
+          <li>Trustworthy Computer Vision</li>
+          
+          <li>Distributed Agents for Shared Perception</li>
+          
+          <li>AI Applications for Augmented Reality</li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <div class="col-md-7">
+        <div class="section-subheading">Education</div>
+        <ul class="ul-edu fa-ul mb-0">
+          
+          <li>
+            <i class="fa-li fas fa-graduation-cap"></i>
+            <div class="description">
+              <p class="course">Ph.D. in Computer Science, 2022 - Present</p>
+              <p class="institution">Virginia Tech</p>
+            </div>
+          </li>
+          
+          <li>
+            <i class="fa-li fas fa-graduation-cap"></i>
+            <div class="description">
+              <p class="course">M.S. in Data Science, 2017 - 2021</p>
+              <p class="institution">George Washington University</p>
+            </div>
+          </li>
+
+          <li>
+            <i class="fa-li fas fa-graduation-cap"></i>
+            <div class="description">
+              <p class="course">Associate of Science in Computer Science, 2014 - 2017</p>
+              <p class="institution">Northern Virginia Community College</p>
+            </div>
+          </li>
+          
+          <li>
+            <i class="fa-li fas fa-graduation-cap"></i>
+            <div class="description">
+              <p class="course">Bachelor of Arts in International Affairs, 2008 - 2012</p>
+              <p class="institution">George Mason University</p>
+            </div>
+          </li>
+          
+        </ul>
+      </div>
+      
+
+    </div>
+  </div>
+</div>
+
+    </div>
+  </section>
+  
+  <section id="skills" class="home-section wg-featurette  "  >
+   <div class="home-section-bg " >
+     
+   </div>
+    <div class="container">
+
+<div class="row featurette">
+  
+  <div class="col-md-12 section-heading">
+    <h1>Skills</h1>
+  </div>
+  
+  <div class="col-12 col-sm-4">
+    <div class="featurette-icon"><i class="fas fa-brain"></i></div>
+    <div class="section-subheading">Artificial Intelligence & Machine Learning</div>
+    <p>Deep Learning, Computer Vision, Object Detection (YOLO, CenterNet), Human-in-the-Loop AI, Trustworthy AI, Explainable AI (XAI), GANs, TensorRT Optimization</p>
+    <p>PyTorch, TensorFlow, Scikit-learn, OpenCV, CUDA, Edge AI Deployment</p>
+  </div>
+  
+  <div class="col-12 col-sm-4">
+    <div class="featurette-icon"><i class="fas fa-vr-cardboard"></i></div>
+    <div class="section-subheading">Augmented & Distributed Systems</div>
+    <p>Augmented Reality (AR), Shared Perception Systems, Microsoft HoloLens (IVAS), Unity, Unreal Engine, Human-AI Teaming, Multi-Agent Systems, Embedded Vision</p>
+    <p>Systems Integration, Sensor Fusion, Real-time AI Processing, Distributed Edge Computing</p>
+  </div>
+  
+  <div class="col-12 col-sm-4">
+    <div class="featurette-icon"><i class="fas fa-project-diagram"></i></div>
+    <div class="section-subheading">Technical Leadership & Research Management</div>
+    <p>Program Management (6.2–6.3 R&D), Cross-Functional Team Leadership, Portfolio Strategy, Technology Transition Planning, Stakeholder Engagement</p>
+    <p>Proposal Development, Evaluation Design, Soldier-in-the-Loop Testing, Strategic Communication, Data-driven Decision Support</p>
+  </div>
+  
+  
+</div>
+    </div>
+</section>
+
+<section id="experience" class="home-section wg-experience  "  >
+  <div class="home-section-bg " >
     
+  </div>
+  <div class="container">
+
+    <div class="row  ">
+      
+      <div class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
+        <h1 class="mb-0">Experience</h1>
+      </div>
+
+      <div class="col-12 col-lg-8">
+
+        <!-- DEVCOM C5ISR -->
+        <div class="row experience">
+          <div class="col-auto text-center flex-column d-none d-sm-flex">
+            <div class="row h-50">
+              <div class="col ">&nbsp;</div>
+              <div class="col">&nbsp;</div>
+            </div>
+            <div class="m-2">
+              <span class="badge badge-pill border exp-fill">&nbsp;</span>
+            </div>
+            <div class="row h-50">
+              <div class="col border-right">&nbsp;</div>
+              <div class="col">&nbsp;</div>
+            </div>
+          </div>
+          
+          <div class="col py-2">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex align-content-start">
+                  <div class="mr-2 mb-2"><a href="#" target="_blank" rel="noopener"><img src="/media/icons/brands/DEVCOM_C5ISR_logo.svg" width="56px" height="56px" alt="DEVCOM C5ISR Center" loading="lazy"></a></div>
+                  <div>
+                    <div class="section-subheading card-title exp-title text-muted my-0">Data Scientist (GS-14)</div>
+                    <div class="section-subheading card-title exp-company text-muted my-0"><a href="#" target="_blank" rel="noopener">U.S. Army, DEVCOM, C5ISR Center</a></div>
+                    <div class="text-muted exp-meta">
+                      November 2020 –
+                      
+                        Present
+                      
+                      
+                        <span class="middot-divider"></span>
+                        <span>Fort Belvoir, Virginia</span>
+                      
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-text"><ul>
+<li>Serve as Project Lead for the Dismounted AiTR Innovation Project; advanced to TRL 6 with deployable AI-powered threat recognition and shared-perception platforms.</li>
+<li>Direct program execution: budget tracking, burn-rate monitoring, development timelines, risk mitigation, and weekly leadership updates; led soldier-in-the-loop field testing and high-stakes demos for general officers.</li>
+<li>Lead R&amp;D of advanced computer vision algorithms (Python, PyTorch, HPC) and optimize edge-deployed deep learning on autonomous ground/aerial systems.</li>
+<li>Architect AR applications for IVAS (Unity, Microsoft HoloLens) enabling real-time interaction with sensors and firearm optics.</li>
+<li>Primary support to the Countermine Division's Algorithms &amp; Image Processing Branch; manage collaborations with academic partners and contractors.</li>
+</ul></div>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- .container -->
-    </div>
-    <!-- .content -->
-    
-    <footer class="footer">
-        <div class="footer-social">
-            <ul class="social">
-                <li><a class="ripple-centered" href="https://www.facebook.com/Matthew8985" target="https://www.facebook.com/Matthew8985"><i class="rsicon rsicon-facebook"></i></a></li>
-                <li><a class="ripple-centered" href="" target="_blank"><i class="rsicon rsicon-twitter"></i></a></li>
-                <li><a class="ripple-centered" href="https://www.linkedin.com/in/matthew-wilchek-26539a36/" target="https://www.linkedin.com/in/matthew-wilchek-26539a36/"><i class="rsicon rsicon-linkedin"></i></a></li>
-                <li><a class="ripple-centered" href="" target="_blank"><i class="rsicon rsicon-google-plus"></i></a></li>
-                <li><a class="ripple-centered" href="" target="_blank"><i class="rsicon rsicon-dribbble"></i></a></li>
-                <li><a class="ripple-centered" href="" target="_blank"><i class="rsicon rsicon-instagram"></i></a></li>
-            </ul>
+
+        <!-- DHS ICE -->
+        <div class="row experience">
+          <div class="col-auto text-center flex-column d-none d-sm-flex">
+            <div class="row h-50">
+              <div class="col border-right">&nbsp;</div>
+              <div class="col">&nbsp;</div>
+            </div>
+            <div class="m-2">
+              <span class="badge badge-pill border ">&nbsp;</span>
+            </div>
+            <div class="row h-50">
+              <div class="col border-right">&nbsp;</div>
+              <div class="col">&nbsp;</div>
+            </div>
+          </div>
+          
+          <div class="col py-2">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex align-content-start">
+                  <div class="mr-2 mb-2"><img src="/media/icons/brands/DHS_ICE_logo.svg" width="56px" height="56px" alt="DHS ICE" loading="lazy"></div>
+                  <div>
+                    <div class="section-subheading card-title exp-title text-muted my-0">Senior Operations Research Analyst (GS-14)</div>
+                    <div class="section-subheading card-title exp-company text-muted my-0">DHS, Immigration and Customs Enforcement (ICE)</div>
+                    <div class="text-muted exp-meta">
+                      November 2017 –
+                      
+                        November 2020
+                      
+                      
+                        <span class="middot-divider"></span>
+                        <span>Washington, DC</span>
+                      
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-text"><p>Responsibilities included:</p>
+<ul>
+<li>Led and managed a team of 11 contractors delivering advanced analytics across the immigration lifecycle; oversaw tasking, technical direction, and quality.</li>
+<li>Developed deep-learning time-series forecasts of detention populations on AWS GPU infrastructure (LSTM, DA-RNN in Python/PyTorch).</li>
+<li>Built dashboards, mobile apps, and automated ETL pipelines using Python, R, SQL, Tableau, and Java/Swift.</li>
+<li>Designed algorithms to automate criminal intelligence reporting in support of federal investigations.</li>
+</ul></div>
+              </div>
+            </div>
+          </div>
         </div>
-    </footer>
-    <!-- .footer -->
-	
+
+        <!-- U.S. Census Bureau -->
+        <div class="row experience">
+          <div class="col-auto text-center flex-column d-none d-sm-flex">
+            <div class="row h-50">
+              <div class="col border-right">&nbsp;</div>
+              <div class="col">&nbsp;</div>
+            </div>
+            <div class="m-2">
+              <span class="badge badge-pill border ">&nbsp;</span>
+            </div>
+            <div class="row h-50">
+              <div class="col border-right">&nbsp;</div>
+              <div class="col">&nbsp;</div>
+            </div>
+          </div>
+          
+          <div class="col py-2">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex align-content-start">
+                  <div class="mr-2 mb-2"><img src="/media/icons/brands/US_Census_Bureau_logo.svg" width="56px" height="56px" alt="U.S. Census Bureau" loading="lazy"></div>
+                  <div>
+                    <div class="section-subheading card-title exp-title text-muted my-0">Geographer (GS-11)</div>
+                    <div class="section-subheading card-title exp-company text-muted my-0">U.S. Census Bureau</div>
+                    <div class="text-muted exp-meta">
+                      November 2016 –
+                      
+                        November 2017
+                      
+                      
+                        <span class="middot-divider"></span>
+                        <span>Suitland, Maryland</span>
+                      
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-text"><p>Responsibilities included:</p>
+<ul>
+<li>Developed Python programs to ingest, process, and analyze large geospatial datasets supporting national mapping and enumeration.</li>
+<li>Performed EDA using R and SQL; produced spatial/demographic insights.</li>
+<li>Supported the Hidden Unit Task Force identifying concealed housing units for the 2020 Census using NIR/LiDAR imagery with ArcGIS/Arcpy.</li>
+</ul></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- USDA FAS -->
+        <div class="row experience">
+          <div class="col-auto text-center flex-column d-none d-sm-flex">
+            <div class="row h-50">
+              <div class="col border-right">&nbsp;</div>
+              <div class="col">&nbsp;</div>
+            </div>
+            <div class="m-2">
+              <span class="badge badge-pill border ">&nbsp;</span>
+            </div>
+            <div class="row h-50">
+              <div class="col border-right">&nbsp;</div>
+              <div class="col">&nbsp;</div>
+            </div>
+          </div>
+          
+          <div class="col py-2">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex align-content-start">
+                  <div class="mr-2 mb-2"><img src="/media/icons/brands/USDA_FAS_logo.svg" width="56px" height="56px" alt="USDA FAS" loading="lazy"></div>
+                  <div>
+                    <div class="section-subheading card-title exp-title text-muted my-0">International Program Specialist (GS-7)</div>
+                    <div class="section-subheading card-title exp-company text-muted my-0">U.S. Department of Agriculture – Foreign Agricultural Service (FAS)</div>
+                    <div class="text-muted exp-meta">
+                      October 2015 –
+                      
+                        November 2016
+                      
+                      
+                        <span class="middot-divider"></span>
+                        <span>Washington, DC</span>
+                      
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-text"><ul>
+<li>Served as primary technology liaison/business analyst for the Disaster Assistance Division within the Office of the Director.</li>
+<li>Developed analytical reports from large global agricultural datasets and integrated results into GIS using Java, JavaScript, HTML, and QML.</li>
+</ul></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Northrop Grumman -->
+        <div class="row experience">
+          <div class="col-auto text-center flex-column d-none d-sm-flex">
+            <div class="row h-50">
+              <div class="col border-right">&nbsp;</div>
+              <div class="col">&nbsp;</div>
+            </div>
+            <div class="m-2">
+              <span class="badge badge-pill border ">&nbsp;</span>
+            </div>
+            <div class="row h-50">
+              <div class="col ">&nbsp;</div>
+              <div class="col">&nbsp;</div>
+            </div>
+          </div>
+          
+          <div class="col py-2">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex align-content-start">
+                  <div class="mr-2 mb-2"><img src="/media/icons/brands/Northrop_Grumman_logo.svg" width="56px" height="56px" alt="Northrop Grumman" loading="lazy"></div>
+                  <div>
+                    <div class="section-subheading card-title exp-title text-muted my-0">Competitive Intelligence Analyst</div>
+                    <div class="section-subheading card-title exp-company text-muted my-0">Northrop Grumman Corporation</div>
+                    <div class="text-muted exp-meta">
+                      May 2012 –
+                      
+                        October 2015
+                      
+                      
+                        <span class="middot-divider"></span>
+                        <span>McLean, Virginia</span>
+                      
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-text"><div>Responsibilities included:</div>
+<ul>
+<li>Provided market and competitive intelligence supporting international business development for the Air &amp; Missile Defense division.</li>
+<li>Developed/maintained content for federal advisory platforms (FinCEN.gov, 314a site, FinCEN Registered User Portal) used by law enforcement and financial institutions.</li>
+<li>Supported OSINT-enabled analytical tool design; conducted operational research, planning analysis, and FININT assessments.</li>
+</ul></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
     </div>
-    <!-- .wrapper -->
+
+  </div>
+</section>
+
+  <!--<section id="projects" class="home-section wg-portfolio  "  >
+   <div class="home-section-bg " >
+     
+   </div>
+    <div class="container">
+
     
-    <a class="btn-scroll-top" href="#"><i class="rsicon rsicon-arrow-up"></i></a>
+      <div class="row  ">
+      
+        
+          <div class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
+            <h1 class="mb-0">Projects</h1>
+            
+          </div>
+  
+<div class="col-12 col-lg-8">
+
+ 
+  <div class=" row js-layout-row ">
+  
+          <div class="col-12 isotope-item js-id-Crowdsourcing js-id-Design-based-research js-id-OSINT">
+        
+  
+<div class="media stream-item view-compact">
+  <div class="media-body">
+
+    <div class="section-subheading article-title mb-0 mt-0">
+      <a href="/project/expert-led-crowdsourcing-in-osint-investigations/" >Expert-led crowdsourcing in Open Source Intelligence (OSINT) Investigations</a>
+    </div>
+
     
-    <div id="overlay"></div>
-    <div id="preloader">
-        <div class="preload-icon"><span></span><span></span></div>
-        <div class="preload-text">Loading ...</div>
+    <a href="/project/expert-led-crowdsourcing-in-osint-investigations/"  class="summary-link">
+      <div class="article-style">
+        <p>Developed a framework for students trained in social media information discovery and verification skills to augment the investigative practices of journalists, law enforcement officers, and human rights activists. I ran five study sessions where students contributed to real-world investigations being carried out by the experts.</p>
+<p>I used design-based research (DBR) approach to develop the collaborative framework. Data collection was in the form of collaborative spreadsheets containing feedback from experts, semi-structured interviews with students and experts, and student reflection assignments.</p>
+<p>Paper accepted at CSCW 2024</p>
+
+      </div>
+    </a>
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+      <div>
+        
+
+  <span >
+      Matthew Wilchek</span>, <span >
+      Kurt Luther</span>
+      </div>
+      
+    </div>
+
+    
+
+  </div>
+  <div class="ml-3">
+    
+    
+    
+    <a href="/project/expert-led-crowdsourcing-in-osint-investigations/" >
+      <img src="/project/expert-led-crowdsourcing-in-osint-investigations/featured_hua320c9bc4264bc8ee2a5075f5cdc9dd0_14368_150x0_resize_q75_h2_lanczos.webp" height="112" width="150"
+           alt="Expert-led crowdsourcing in Open Source Intelligence (OSINT) Investigations" loading="lazy">
+    </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+      
+        
+          <div class="col-12 isotope-item js-id-Social-media-misinformation js-id-Gamification js-id-Research-through-design">
+ 
+<div class="media stream-item view-compact">
+  <div class="media-body">
+
+    <div class="section-subheading article-title mb-0 mt-0">
+      <a href="/project/collaboration-and-competition-in-open-source-intelligence-osint-analysis/" >Collaboration and competition in Open Source Intelligence (OSINT) analysis</a>
+    </div>
+
+    
+    <a href="/project/collaboration-and-competition-in-open-source-intelligence-osint-analysis/"  class="summary-link">
+      <div class="article-style">
+        <p>Developed a web app for students to participate in Capture the Flag (CTF) events to discover, archive, verify and report possible social media misinformation. The Quriosinty app was used by 40 students every week during the Spring &lsquo;21 semester.</p>
+<p>Here users can form teams, submit pieces of investigation through flags and judges can award points based on a rubric. I built REST API endpoints to extend the platform for integrating new OSINT tools.</p>
+<p>We used a Research through Design (RtD) process to iterate on the platform and generate design recommendations for systems aimed at verification of online information. Data was collected from system logs, student reflections, and semi-structured interviews.</p>
+<p>The paper was published at DIS 2023</p>
+
+      </div>
+    </a>
+    
+
+    <div class="stream-meta article-metadata">
+
+
+      
+      <div>
+        
+
+  <span >
+      Sukrit Venkatagiri</span>, <span >
+      Matthew Wilchek</span>, <span >
+      Kurt Luther</span>
+      </div>
+      
+    </div>
+
+    
+
+  </div>
+  <div class="ml-3">
+    
+    
+    
+    <a href="/project/collaboration-and-competition-in-open-source-intelligence-osint-analysis/" >
+      <img src="/project/collaboration-and-competition-in-open-source-intelligence-osint-analysis/featured_hu38c393b48b848bcb9f9664684e1f9eb5_370139_150x0_resize_q75_h2_lanczos_3.webp" height="77" width="150"
+           alt="Collaboration and competition in Open Source Intelligence (OSINT) analysis" loading="lazy">
+    </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+      
+        
+          <div class="col-12 isotope-item js-id-Human-reposing js-id-Human-AI-Interaction">
+        
+<div class="media stream-item view-compact">
+  <div class="media-body">
+
+    <div class="section-subheading article-title mb-0 mt-0">
+      <a href="/project/explorable-interactive-human-reposing/" >Explorable Interactive Human Reposing</a>
+    </div>
+
+    
+    <a href="/project/explorable-interactive-human-reposing/"  class="summary-link">
+      <div class="article-style">
+        <p>Human-AI Interaction Course project 2021</p>
+<p>We design a notebook to allow the user to upload an image of a person and modify the pose of that person by dragging and dropping body joints.</p>
+<p>We use <a href="https://github.com/microsoft/CoCosNet-v2">CoCosNet-v2</a> to synthesize the image of the reposed person. We use <a href="https://github.com/Hzzone/pytorch-openpose">OpenPose</a> to extract the pose of the person. We use <a href="https://ipywidgets.readthedocs.io/en/latest/"> IPython widgets</a> to enable interaction with the extracted pose.</p>
+
+      </div>
+    </a>
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+      <div>
+        
+
+  <span >
+      Matthew Wilchek</span>, <span >
+      Badour AlBahar</span>, <span >
+      Hongjie Chen</span>
+      </div>
+      
+    </div>
+
+    
+
+  </div>
+  <div class="ml-3">
+    
+    
+    
+    <a href="/project/explorable-interactive-human-reposing/" >
+      <img src="/project/explorable-interactive-human-reposing/featured_hu4ed8013bda79b936a7313323ccdfa40d_226690_150x0_resize_q75_h2_lanczos_3.webp" height="162" width="150"
+           alt="Explorable Interactive Human Reposing" loading="lazy">
+    </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+      
+        
+          <div class="col-12 isotope-item js-id-Combat-online-trolling js-id-Qualitative-study js-id-Prototyping">
+
+<div class="media stream-item view-compact">
+  <div class="media-body">
+
+    <div class="section-subheading article-title mb-0 mt-0">
+      <a href="/project/red-flags-combating-ad-hominem-attacks-in-comment-based-online-discussions/" >Red Flags: Combating ad hominem attacks in comment-based online discussions</a>
+    </div>
+
+    
+    <a href="/project/red-flags-combating-ad-hominem-attacks-in-comment-based-online-discussions/"  class="summary-link">
+      <div class="article-style">
+        <p>Computer Supported Collaborative Work Course project 2021</p>
+<p>Here we propose a flagging mechanism that modifies the process of reporting currently found in popular platforms like Facebook, Instagram, and Twitter. We describe the design, development, and evaluation of a method of curbing ad hominem attacks that occur in common online discussion spaces, particularly comments and replies to posts. Through ethnographic interviews as well as a small-scale user study, we explore the emotional experiences of being the target of or witnessing trolling online, revealing the needs of these groups in these interactions.</p>
+
+      </div>
+    </a>
+    
+
+    <div class="stream-meta article-metadata">
+
+
+      <div>
+        
+
+  <span >
+      Matthew Wilchek</span>, <span >
+      Juliet Clarke</span>, <span >
+      Liling Yuan</span>
+      </div>
+      
+    </div>
+
+    
+
+  </div>
+  <div class="ml-3">
+    
+    
+    
+    <a href="/project/red-flags-combating-ad-hominem-attacks-in-comment-based-online-discussions/" >
+      <img src="/project/red-flags-combating-ad-hominem-attacks-in-comment-based-online-discussions/featured_hu6950be2f62c0769c70976ff118a53bce_195105_150x0_resize_q75_h2_lanczos_3.webp" height="177" width="150"
+           alt="Red Flags: Combating ad hominem attacks in comment-based online discussions" loading="lazy">
+    </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+      
+        
+          <div class="col-12 isotope-item js-id-Pattern-recognition js-id-Indian-script-recognition-in-handwritten-documents">
+
+<div class="media stream-item view-compact">
+  <div class="media-body">
+
+    <div class="section-subheading article-title mb-0 mt-0">
+      <a href="/project/study-and-improvement-of-accuracy-in-the-handwritten-indian-script-recognition-problem/" >Study and improvement of accuracy in the handwritten Indian script recognition problem</a>
+    </div>
+
+    
+    <a href="/project/study-and-improvement-of-accuracy-in-the-handwritten-indian-script-recognition-problem/"  class="summary-link">
+      <div class="article-style">
+        Used texture and frequency-based features along with CNN. Performed classifier combination to achieve high accuracy in the script identification task.<br>
+<br>
+Papers published:<br>
+[1] Mukhopadhyay, Anirban, et al. &ldquo;A study of different classifier combination approaches for handwritten Indic Script Recognition.&rdquo; Journal of Imaging (2018): 39.<br>
+[2] Mukhopadhyay, Anirban, et al. &ldquo;Handwritten Indic script recognition based on the Dempster–Shafer theory of evidence.&rdquo; Journal of Intelligent Systems 29.1 (2020): 264-282.
+      </div>
+    </a>
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+      <div>
+        
+
+  <span >
+      Matthew Wilchek</span>, <span >
+      Ram Sarkar</span>
+      </div>
+      
+    </div>
+
+    
+
+  </div>
+  <div class="ml-3">
+    
+    
+    
+    <a href="/project/study-and-improvement-of-accuracy-in-the-handwritten-indian-script-recognition-problem/" >
+      <img src="/project/study-and-improvement-of-accuracy-in-the-handwritten-indian-script-recognition-problem/featured_hu0975746176c47125f92bb94ec112b454_24457_150x0_resize_q75_h2_lanczos_3.webp" height="86" width="150"
+           alt="Study and improvement of accuracy in the handwritten Indian script recognition problem" loading="lazy">
+    </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+
+  </div>
+</div>
+
+
+    
+      </div>
+    
+
+    </div>
+  </section>-->
+
+  <section id="contact" class="home-section wg-contact  "  >
+   <div class="home-section-bg " >
+     
+   </div>
+    <div class="container">
+
+    
+      <div class="row  ">
+      
+        
+          <div class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
+            <h1 class="mb-0">Contact</h1>
+            
+          </div>
+ 
+<div class="col-12 col-lg-8">
+  
+
+  
+
+  <ul class="fa-ul">
+
+    
+    <li>
+      <i class="fa-li fas fa-envelope fa-2x" aria-hidden="true"></i>
+      <span id="person-email"><a href="mailto:mwilchek@vt.edu">mwilchek@vt.edu</a></span>
+    </li> 
+    
+      
+      <li>
+        <i class="fa-li fas fa-map-marker fa-2x" aria-hidden="true"></i>
+        <span id="person-address">Fort Belvoir, VA 22060</span>
+      </li>
+    
+    <li>
+      <i class="fa-li fab fa-linkedin-in fa-2x" aria-hidden="true"></i>
+      <a href="www.linkedin.com/in/matthew-wilchek-1b52b3207" target="_blank" rel="noopener">Connect with me on LinkedIn</a>
+    </li>
+    
+
+  </ul>
+
+  
+
+</div>
+
+
+    
+      </div>
+    
+
+    </div>
+  </section>
+
+
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
     </div>
     
-    <!-- Scripts -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js?key=AIzaSyBvMes4G9nnuE_4-4v37cc_UdSXKbTL6ns"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvMes4G9nnuE_4-4v37cc_UdSXKbTL6ns"></script>
-    <script type="text/javascript" src="fonts/map-icons/js/map-icons.min.js"></script>
-    <script type="text/javascript" src="js/plugins/jquery.mousewheel-3.0.6.pack.js"></script>
-    <script type="text/javascript" src="js/plugins/imagesloaded.pkgd.min.js"></script>
-    <script type="text/javascript" src="js/plugins/isotope.pkgd.min.js"></script>
-    <script type="text/javascript" src="js/plugins/jquery.appear.min.js"></script>
-    <script type="text/javascript" src="js/plugins/jquery.onepagenav.min.js"></script>
-    <script type="text/javascript" src="js/plugins/jquery.bxslider/jquery.bxslider.min.js"></script>
-    <script type="text/javascript" src="js/plugins/jquery.customscroll/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script type="text/javascript" src="js/plugins/jquery.mediaelement/mediaelement-and-player.min.js"></script>
-    <script type="text/javascript" src="js/plugins/jquery.fancybox/jquery.fancybox.pack.js"></script>
-    <script type="text/javascript" src="js/plugins/jquery.fancybox/helpers/jquery.fancybox-media.js"></script>
-    <script type="text/javascript" src="js/plugins/jquery.owlcarousel/owl.carousel.min.js"></script>
-	<script type="text/javascript" src="js/options.js"></script>
-    <script type="text/javascript" src="js/site.min.js"></script>
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    <script src="/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js"></script>
+
+    
+    
+    
+      
+      
+        <script src="https://cdn.jsdelivr.net/gh/desandro/imagesloaded@v4.1.4/imagesloaded.pkgd.min.js" integrity="sha512-S5PZ9GxJZO16tT9r3WJp/Safn31eu8uWrzglMahDT4dsmgqWonRY9grk3j+3tfuPr9WJNsfooOR7Gi7HL5W2jw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/metafizzy/isotope@v3.0.6/dist/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+
+      
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js" integrity="sha512-Ypjm0o7jOxAd4hpdoppSEN0TQOC19UtPAqD+4s5AlXmUvbmmS/YMxYqAqarQYyxTnB6/rqip9qcxlNB/3U9Wdg==" crossorigin="anonymous"></script>
+        
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/r.min.js" crossorigin="anonymous"></script>
+        
+      
+
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+
+    
+    
+    
+    <script id="page-data" type="application/json">{"use_headroom":false}</script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.247fd8f54253895301106e3006f53f38.js"></script>
+
+    
+
+
+
+
+
+
 </body>
 </html>
